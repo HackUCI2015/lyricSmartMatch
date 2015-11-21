@@ -4,6 +4,9 @@ var fs = require('fs');
 var watson = require('watson-developer-cloud');
 var lyr = require('lyrics-fetcher');
 var async = require('async');
+var pg = require('pg');
+
+var conString = require('../../config/environment').conString;
 
 var translateCategoriesToSQLColumns = {
   'Openness': 'openness',
@@ -66,6 +69,7 @@ function processCombinedLyrics(err, response) {
     var personalityInsight = {};
     var bigFive = response.tree.children[0].children[0].children;
 
+
     for (var i = 0; i < bigFive.length; ++i) {
       var category = bigFive[i];
       personalityInsight[translateCategoriesToSQLColumns[category.name]] = category.percentage.toFixed(2);
@@ -88,22 +92,60 @@ function processCombinedLyrics(err, response) {
  * @param res
  */
  exports.index = function (req, res) {
-  var songs = JSON.parse(req.query.songs);
+  // var songs = JSON.parse(req.query.songs);
 
-  async.reduce(songs, '', getLyrics, function (err, result) {
-    if (err) return err;
+  // async.reduce(songs, '', getLyrics, function (err, result) {
+  //   if (err) return err;
 
-    var personality_insights = watson.personality_insights({
-      username: '60f616bf-9bd5-43d4-988f-be838c2fbbb1',
-      password: '7L8dPygbFFce',
-      version: 'v2'
+  //   var personality_insights = watson.personality_insights({
+  //     username: '60f616bf-9bd5-43d4-988f-be838c2fbbb1',
+  //     password: '7L8dPygbFFce',
+  //     version: 'v2'
+  //   });
+
+  //   personality_insights.profile({
+  //     text: result
+  //   }, processCombinedLyrics);
+  // });
+  sqlConnection();
+}
+
+
+
+function sqlConnection() {
+  pg.connect(conString, function(err, client, done) {
+    if (err) {
+      return console.error('error fetching client from pool', err);
+    }
+
+    var query = 
+      'INSERT INTO db_user(user_name, openness, adventurousness, ' + 
+      'artistic_interests, emotionality, imagination, intellect, ' +
+      'authority_challenging, conscientiousness, achievement_striving, ' +
+      'cautiousness, dutifulness, orderliness, self_discipline, ' +
+      'self_efficacy, extraversion, activity_level, assertiveness, ' +
+      'cheerfulness, excitement_seeking, outgoing, gregariousness, ' +
+      'agreeableness, altruism, cooperation, modesty, uncompromising, ' +
+      'sympathy, trust, emotional_range, fiery, prone_to_worry, melancholy, ' +
+      'immoderation, self_consciousness, susceptible_to_stress) VALUES ' +
+      "('vnguyen94', '0.05', '0.06', '0.07', '0.08', " +
+      "'0.09', '0.10', '0.11', '0.12', '0.13', '0.14', '0.15', '0.16', " +
+      "'0.17', '0.18', '0.19', '0.20', '0.21', '0.22', '0.23', '0.24', " +
+      "'0.25', '0.26', '0.27', '0.28', '0.29', '0.30', '0.31', '0.32', " +
+      "'0.33', '0.34', '0.35', '0.36', '0.37', '0.38', '0.39')";
+
+    client.query(query, function (err, result) {
+      //call `done()` to release the client back to the pool 
+      done();
+      
+      if (err) {
+        return console.error('error running query', err);
+      }
+      console.log(result);
     });
-
-    personality_insights.profile({
-      text: result
-    }, processCombinedLyrics);
   });
 }
+
 
 
 /**
