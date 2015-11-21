@@ -7,10 +7,13 @@ angular.module('hackuci2015')
 
     angular.extend(vm, {
       name: 'MatchesCtrl',
-
-      getUsers: UserFactory.getUsers
     });
 
-    vm.getUsers();
+    UserFactory.getUsers()
+      .then(function (rows) {
+        vm.users = rows;
+      }, function (err) {
+        console.log(err);
+      });
 
   });

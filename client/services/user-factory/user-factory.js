@@ -1,17 +1,19 @@
 'use strict';
 
 angular.module('hackuci2015')
-  .factory('UserFactory', function ($http) {
+  .factory('UserFactory', function ($http, $q) {
 
     return {
       getUsers: function () {
-        $http({
-          method: 'GET',
-          url: '/api/get-users'
-        }).then(function success (result) {
-          console.log(result.data.rows);
-        }, function error (err) {
-          console.log(err);
+        return $q(function (resolve, reject) {
+          $http({
+            method: 'GET',
+            url: '/api/get-users'
+          }).then(function (result) {
+            resolve(result.data.rows);
+          }, function (err) {
+            reject('could not get users.');
+          });
         });
       }
     };
