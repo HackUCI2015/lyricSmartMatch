@@ -1,0 +1,16 @@
+body {
+  font-family: 'RobotoDraft', sans-serif;
+  font-size: em($base-font-size);
+}
+
+md-select-menu {
+  md-content {
+    background-color: #F6F6F6;
+  }
+
+  md-option {
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+}

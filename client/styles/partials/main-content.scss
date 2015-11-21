@@ -1,0 +1,34 @@
+md-content {
+  background-color: $filler-background-color;
+}
+
+.main-content md-toolbar {
+  // background-color: $toolbar-background-color;
+}
+
+md-card {
+  padding: em(30);
+  background-color: #fff;
+
+  h2:first-of-type {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 599px) {
+  md-card {
+    margin: em(0);
+  }
+}
+
+@media (min-width: 600px) {
+  md-card {
+    margin: em(30);
+  }
+}
+
+@media (min-width: 960px) {
+  md-card {
+    margin: em(30) em(120);
+  }
+}

@@ -1,0 +1,13 @@
+.list-login .md-button {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.list-login-signup .md-button {
+  background-color: #ddFFFF;
+
+  &:hover {
+    background-color: #33FFFF;
+  }
+}

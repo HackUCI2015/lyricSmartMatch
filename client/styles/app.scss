@@ -1,3 +1,7 @@
-body {
-  font-family: sans-serif;
-}
+@import './initial-variables.scss';
+@import './partials/functions.scss';
+@import './partials/base.scss';
+@import './partials/sidenav.scss';
+@import './partials/main-content.scss';
+@import './partials/login.scss';
+@import './partials/animation.scss';

@@ -14,6 +14,7 @@
     <!-- build:css app.css -->
 
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <!-- endinject -->
 
     <link rel="stylesheet" href="styles/css/app.css">
@@ -21,11 +22,23 @@
     <!-- endbuild -->
 
   </head>
-  <body>
+  <body layout="row">
+    <sidenav></sidenav>
 
-    <strong>hackuci2015</strong>
+    <div
+      layout="column"
+      class="relative main-content"
+      layout-fill
+      role="main">
 
-    <div ng-view></div>
+      <topbar></topbar>
+
+      <md-content flex md-scroll-y>
+        <md-card flex-gt-sm="90" flex-gt-md="80">
+          <ng-view></ng-view>
+        </md-card>
+      </md-content>
+    </div>
 
     <!-- build:js app.js -->
 
@@ -33,14 +46,22 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
     <!-- endinject -->
 
     <!-- inject:js -->
     <script src="app.js"></script>
-    <script src="views/watson/watson.js"></script>
-    <script src="views/watson/watson.controller.js"></script>
-    <script src="views/home/home.js"></script>
+    <script src="directives/sidenav/sidenav.directive.js"></script>
+    <script src="directives/topbar/topbar.directive.js"></script>
+    <script src="views/analyze/analyze.controller.js"></script>
+    <script src="views/analyze/analyze.js"></script>
     <script src="views/home/home.controller.js"></script>
+    <script src="views/home/home.js"></script>
+    <script src="views/matches/matches.controller.js"></script>
+    <script src="views/matches/matches.js"></script>
+    <script src="views/watson/watson.controller.js"></script>
+    <script src="views/watson/watson.js"></script>
     <!-- endinject -->
 
     <!-- endbuild -->

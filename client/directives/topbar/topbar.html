@@ -1,0 +1,19 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <md-button
+      ng-click="toggleSidenav('left')"
+      hide-gt-md
+      class="md-icon-button">
+      <md-icon aria-label="Menu" md-svg-icon="assets/images/menu.svg">
+      </md-icon>
+    </md-button>
+    <h3>smartLyric</h3>
+    <span flex></span>
+    <md-button
+      ng-if="user.email"
+      ng-click="logout()"
+      aria-label="Logout">
+      Logout
+    </md-button>
+  </div>
+</md-toolbar>

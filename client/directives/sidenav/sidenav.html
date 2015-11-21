@@ -1,0 +1,40 @@
+<md-sidenav
+  layout="column"
+  class="md-sidenav-left md-whiteframe-z2"
+  md-component-id="left"
+  md-is-locked-open="$mdMedia('gt-md')">
+  <md-toolbar class="md-tall md-sidenav">
+    <span flex></span>
+    <div
+      ng-if="user.email"
+      layout="column"
+      class="md-toolbar-tools-bottom inset">
+      <div>{{ user.firstName + ' ' + user.lastName }}</div>
+      <div>{{ user.email }}</div>
+    </div>
+    <div
+      ng-if="!user.email"
+      layout="column"
+      class="md-toolbar-tools-bottom inset">
+      <div>Not Logged in</div>
+    </div>
+  </md-toolbar>
+  <md-list>
+    <md-item ng-repeat="item in menuItems" layout="row">
+      <md-button
+        ng-click="navigate(item.link)"
+        ng-class="{ active:isActive(item.link) }"
+        ng-disabled="item.disabledIfLoggedOut && !user.email">
+        {{ item.title }}
+      </md-button>
+    </md-item>
+    <md-divider></md-divider>
+    <md-item>
+      <md-button
+        ng-href="https://github.com/MedAppJamTeam14/iPallor"
+        target="_blank">
+        Github
+      </md-button>
+    </md-item>
+  </md-list>
+</md-sidenav>
