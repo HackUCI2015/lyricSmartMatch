@@ -3,10 +3,24 @@
 var fs = require('fs');
 var watson = require('watson-developer-cloud');
 var lyr = require('lyrics-fetcher');
+var async = require('async');
 
 function handleError (res, err) {
   return res.status(500).send(err);
 }
+
+
+function getLyrics(prev, song, callback) {
+  console.log ('fetching: ' + song.artist + ' ' + song.name);
+  lyr.fetch(song.artist, song.name, function (err, lyrics) {
+    if (err) {
+      console.log(err);
+    } else {
+      callback(null, prev + lyrics);
+    }
+  });
+}
+
 
 
 /**
@@ -16,39 +30,38 @@ function handleError (res, err) {
  * @param res
  */
  exports.index = function (req, res) {
-  lyr.fetch('drake', 'started from the bottom', function (err, lyrics) {
-    if (err !== null) {
-      console.log(err);
-    }
-    else {
-      console.log("found lyrics");
-      var personality_insights = watson.personality_insights({
-        username: "60f616bf-9bd5-43d4-988f-be838c2fbbb1",
-        password: "7L8dPygbFFce",
-        version: 'v2'
-      });
+  var songs = JSON.parse(req.query.songs);
 
-      personality_insights.profile({
-        text: lyrics
-      }, function (err, response) {
-        if (err) {
-          console.log('error:', err);
-        }
-        else {
-          var bigFive = response.tree.children[0].children[0].children;
-          for (var i = 0; i < bigFive.length; ++i) {
-            var category = bigFive[i];
-            console.log(category.name + ": " + category.percentage.toFixed(2));
-            for (var j = 0; j < category.children.length; ++j) {
-              var subCategory = category.children[j];
-              console.log('  ' + subCategory.name + ": " + subCategory.percentage.toFixed(2));
-            }
+  async.reduce(songs, '', getLyrics, function (err, result) {
+    if (err) return err;
+
+    var personality_insights = watson.personality_insights({
+      username: '60f616bf-9bd5-43d4-988f-be838c2fbbb1',
+      password: '7L8dPygbFFce',
+      version: 'v2'
+    });
+    console.log(result);
+
+    personality_insights.profile({
+      text: result
+    }, function (err, response) {
+      if (err) {
+        console.log('error:', err);
+      }
+      else {
+        var bigFive = response.tree.children[0].children[0].children;
+        for (var i = 0; i < bigFive.length; ++i) {
+          var category = bigFive[i];
+          console.log(category.name + ': ' + category.percentage.toFixed(2));
+          for (var j = 0; j < category.children.length; ++j) {
+            var subCategory = category.children[j];
+            console.log('  ' + subCategory.name + ': ' + subCategory.percentage.toFixed(2));
           }
         }
-      });
-    }
+      }
+    });
   });
-};
+}
 
 
 /**

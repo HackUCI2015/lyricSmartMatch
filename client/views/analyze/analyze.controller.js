@@ -15,13 +15,20 @@ angular.module('hackuci2015')
           song = songList[i].split(' - ');
 
           if (song)
-            compiledSongList.push(song);
+            compiledSongList.push({
+              artist: song[0],
+              name: song[1]
+            });
         }
 
+        console.log('compiledSongList');
         console.log(compiledSongList);
         $http({
           method: 'GET',
-          url: '/api/process-songs'
+          url: '/api/process-songs',
+          params: {
+            songs: JSON.stringify(compiledSongList)
+          }
         }).then(function success (data) {
           console.log(data);
         }, function error (err) {
