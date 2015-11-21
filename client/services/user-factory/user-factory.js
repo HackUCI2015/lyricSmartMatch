@@ -10,7 +10,7 @@ angular.module('hackuci2015')
             method: 'GET',
             url: '/api/get-users'
           }).then(function (result) {
-            resolve(result.data.rows);
+            resolve(result.data);
           }, function (err) {
             reject('could not get users.');
           });
