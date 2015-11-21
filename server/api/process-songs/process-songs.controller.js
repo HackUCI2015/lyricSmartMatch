@@ -11,16 +11,36 @@ function handleError (res, err) {
 
 
 function getLyrics(prev, song, callback) {
-  console.log ('fetching: ' + song.artist + ' ' + song.name);
+  console.log ('fetching: ' + song.artist + ' - ' + song.name);
   lyr.fetch(song.artist, song.name, function (err, lyrics) {
     if (err) {
-      console.log(err);
+      callback(err);
     } else {
       callback(null, prev + lyrics);
     }
   });
 }
 
+function processCombinedLyrics(err, response) {
+  if (err) {
+    res.status(500).json({ error: 'could not load lyrics' });
+  } else {
+    var personalityInsight = {};
+    var bigFive = response.tree.children[0].children[0].children;
+
+    for (var i = 0; i < bigFive.length; ++i) {
+      var category = bigFive[i];
+      personalityInsight[category.name] = category.percentage.toFixed(2);
+
+      for (var j = 0; j < category.children.length; ++j) {
+        var subCategory = category.children[j];
+        personalityInsight[subCategory.name] = subCategory.percentage.toFixed(2);
+      }
+    }
+
+    console.log(personalityInsight);
+  }
+}
 
 
 /**
@@ -40,26 +60,10 @@ function getLyrics(prev, song, callback) {
       password: '7L8dPygbFFce',
       version: 'v2'
     });
-    console.log(result);
 
     personality_insights.profile({
       text: result
-    }, function (err, response) {
-      if (err) {
-        console.log('error:', err);
-      }
-      else {
-        var bigFive = response.tree.children[0].children[0].children;
-        for (var i = 0; i < bigFive.length; ++i) {
-          var category = bigFive[i];
-          console.log(category.name + ': ' + category.percentage.toFixed(2));
-          for (var j = 0; j < category.children.length; ++j) {
-            var subCategory = category.children[j];
-            console.log('  ' + subCategory.name + ': ' + subCategory.percentage.toFixed(2));
-          }
-        }
-      }
-    });
+    }, processCombinedLyrics);
   });
 }
 
