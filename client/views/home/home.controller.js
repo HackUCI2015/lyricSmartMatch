@@ -6,12 +6,7 @@ angular.module('hackuci2015')
     var vm = this;
 
     angular.extend(vm, {
-      name: 'HomeCtrl',
-
-      sendSongs: function () {
-        var songList = $('#song-list').val();
-        console.log(songList);
-      }
+      name: 'HomeCtrl'
     });
 
   });

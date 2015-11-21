@@ -38,7 +38,7 @@ angular.module('hackuci2015', [
       menuItems: [
         {
           link: '/',
-          title: 'Login',
+          title: 'Home',
           disabledIfLoggedOut: false
         },
         {
