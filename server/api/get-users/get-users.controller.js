@@ -25,7 +25,7 @@ exports.index = function (req, res) {
     var query = 
       'SELECT * from users';
 
-    client.query(query, function (err, users) {
+    client.query(query, function (err, result) {
       //call `done()` to release the client back to the pool 
       done();
       
@@ -33,7 +33,46 @@ exports.index = function (req, res) {
         return console.error('error running query', err);
       }
 
-      res.status(200).json(users);
+      var users = result.rows;
+
+      var user = {
+        username: "maxpaulus",
+        id: 123456,
+        'agreeableness': .52,
+        'orderliness' : 1.0,
+        'excitement_seeking' : .11,
+        'fiery': .24
+      }
+
+      var distancesToOtherUsers = [];
+
+      for (var j = 0; j < users.length; j++) {
+        var otherUser = users[j];
+        if (otherUser.id !== user.id) {
+          var diffSum = 0;
+          for (var trait in user) {
+            if (user.hasOwnProperty(trait) && trait !== 'username' && trait !== 'id') {
+              var diff = Math.abs(+user[trait] - +otherUser[trait]);
+              console.log('\n'); 
+              console.log(otherUser);
+              console.log('user: ' + (user[trait]) + ', other: ' + (otherUser[trait]));
+              console.log(diff)
+              diffSum += diff;
+            }
+          }
+          distancesToOtherUsers.push({
+            distance: diffSum.toFixed(2),
+            username: otherUser.user_name,
+            id: otherUser.id
+          });
+        }
+      }
+
+      distancesToOtherUsers = distancesToOtherUsers
+        .sort(function (a, b) { return a.distance < b.distance })
+        .splice(0,5);
+      console.log(distancesToOtherUsers);
+      res.status(200).json(distancesToOtherUsers);
     });
   });
 };
