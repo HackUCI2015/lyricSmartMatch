@@ -1,10 +1,16 @@
 'use strict';
 
 angular.module('hackuci2015')
-  .controller('MatchesCtrl', function () {
+  .controller('MatchesCtrl', function (UserFactory) {
 
-    angular.extend(this, {
-      name: 'MatchesCtrl'
+    var vm = this;
+
+    angular.extend(vm, {
+      name: 'MatchesCtrl',
+
+      getUsers: UserFactory.getUsers
     });
+
+    vm.getUsers();
 
   });

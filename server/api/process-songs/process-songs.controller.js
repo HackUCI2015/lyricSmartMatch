@@ -69,7 +69,6 @@ function processCombinedLyrics(err, response) {
     var personalityInsight = {};
     var bigFive = response.tree.children[0].children[0].children;
 
-
     for (var i = 0; i < bigFive.length; ++i) {
       var category = bigFive[i];
       personalityInsight[translateCategoriesToSQLColumns[category.name]] = category.percentage.toFixed(2);
@@ -80,46 +79,18 @@ function processCombinedLyrics(err, response) {
       }
     }
 
-    console.log(personalityInsight);
+    insertIntoUsersTable(personalityInsight);
   }
 }
 
-
-/**
- * Get list of ProcessSongs
- *
- * @param req
- * @param res
- */
- exports.index = function (req, res) {
-  // var songs = JSON.parse(req.query.songs);
-
-  // async.reduce(songs, '', getLyrics, function (err, result) {
-  //   if (err) return err;
-
-  //   var personality_insights = watson.personality_insights({
-  //     username: '60f616bf-9bd5-43d4-988f-be838c2fbbb1',
-  //     password: '7L8dPygbFFce',
-  //     version: 'v2'
-  //   });
-
-  //   personality_insights.profile({
-  //     text: result
-  //   }, processCombinedLyrics);
-  // });
-  sqlConnection();
-}
-
-
-
-function sqlConnection() {
+function insertIntoUsersTable(personalityInsight) {
   pg.connect(conString, function(err, client, done) {
     if (err) {
       return console.error('error fetching client from pool', err);
     }
 
     var query = 
-      'INSERT INTO db_user(user_name, openness, adventurousness, ' + 
+      'INSERT INTO users(user_name, openness, adventurousness, ' + 
       'artistic_interests, emotionality, imagination, intellect, ' +
       'authority_challenging, conscientiousness, achievement_striving, ' +
       'cautiousness, dutifulness, orderliness, self_discipline, ' +
@@ -141,10 +112,36 @@ function sqlConnection() {
       if (err) {
         return console.error('error running query', err);
       }
-      console.log(result);
+
+      res.status(200).json({});
     });
   });
 }
+
+/**
+ * Get list of ProcessSongs
+ *
+ * @param req
+ * @param res
+ */
+ exports.index = function (req, res) {
+  var songs = JSON.parse(req.query.songs);
+
+  async.reduce(songs, '', getLyrics, function (err, result) {
+    if (err) return err;
+
+    var personality_insights = watson.personality_insights({
+      username: '60f616bf-9bd5-43d4-988f-be838c2fbbb1',
+      password: '7L8dPygbFFce',
+      version: 'v2'
+    });
+
+    personality_insights.profile({
+      text: result
+    }, processCombinedLyrics);
+  });
+}
+
 
 
 

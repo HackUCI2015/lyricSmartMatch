@@ -5,6 +5,7 @@ var config = require('./config/environment');
 module.exports = function (app) {
 
   // API
+  app.use('/api/get-users', require('./api/get-users'));
   app.use('/api/process-songs', require('./api/process-songs'));
 
   app.route('/:url(api|app|bower_components|assets)/*')
