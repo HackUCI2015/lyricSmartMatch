@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hackuci2015')
-  .controller('AnalyzeCtrl', function () {
+  .controller('AnalyzeCtrl', function ($http) {
 
     angular.extend(this, {
       name: 'AnalyzeCtrl',
@@ -19,6 +19,14 @@ angular.module('hackuci2015')
         }
 
         console.log(compiledSongList);
+        $http({
+          method: 'GET',
+          url: '/api/process-songs'
+        }).then(function success (data) {
+          console.log(data);
+        }, function error (err) {
+
+        })
       }
     });
 

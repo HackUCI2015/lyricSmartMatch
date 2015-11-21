@@ -69,6 +69,7 @@ function handleError (res, err) {
  * @param res
  */
  exports.create = function (req, res) {
+  console.log('i posted');
   res.status(201).json({});
 };
 
