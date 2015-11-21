@@ -53,10 +53,6 @@ exports.index = function (req, res) {
           for (var trait in user) {
             if (user.hasOwnProperty(trait) && trait !== 'username' && trait !== 'id') {
               var diff = Math.abs(+user[trait] - +otherUser[trait]);
-              console.log('\n'); 
-              console.log(otherUser);
-              console.log('user: ' + (user[trait]) + ', other: ' + (otherUser[trait]));
-              console.log(diff)
               diffSum += diff;
             }
           }
