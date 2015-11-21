@@ -1,0 +1,14 @@
+.matches-users {
+  margin-top: 10px;
+  list-style-type: none;
+  border-bottom: 1px solid gray;
+}
+
+.matches-users h3,
+.matches-users button {
+  display: inline-block;
+}
+
+.matches-users button {
+  float: right;
+}

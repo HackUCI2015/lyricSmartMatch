@@ -1,3 +1,8 @@
+<md-header class="md-primary">Top Matches</md-header>
 <ul>
-  <li ng-repeat="user in vm.users">{{ user.id }} - {{ user.username }}</li>
+  <li ng-repeat="user in vm.users" class="matches-users">
+    <h3>{{ $index+1 }}. {{ user.username }} ({{ user.distance }} similarity)</h3>
+    <md-button id="user-id-{{ user.id }}" ng-click="vm.matchUser(user.id)" class="md-raised md-primary">Match</md-button>
+  </li>
 </ul>
+

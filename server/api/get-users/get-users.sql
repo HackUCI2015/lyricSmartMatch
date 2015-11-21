@@ -1,0 +1,16 @@
+INSERT INTO users(user_name, openness, adventurousness, artistic_interests, 
+            emotionality, imagination, intellect, authority_challenging, 
+            conscientiousness, achievement_striving, cautiousness, dutifulness, 
+            orderliness, self_discipline, self_efficacy, extraversion, activity_level, 
+            assertiveness, cheerfulness, excitement_seeking, outgoing, gregariousness, 
+            agreeableness, altruism, cooperation, modesty, uncompromising, 
+            sympathy, trust, emotional_range, fiery, prone_to_worry, melancholy, 
+            immoderation, self_consciousness, susceptible_to_stress)
+    VALUES ('prateek', '0.25', '0.36', '0.07', '0.08', 
+            '0.09', '0.60', '0.61', '0.32', 
+            '0.13', '0.16', '0.16', '0.17', 
+            '0.17', '0.28', '0.29', '0.40', '0.56', 
+            '0.22', '0.26', '0.64', '0.25', '0.36', 
+            '0.27', '0.58', '0.27', '0.70', '0.35', 
+            '0.32', '0.13', '0.32', '0.34', '0.66', '0.37', 
+            '0.38', '0.39');

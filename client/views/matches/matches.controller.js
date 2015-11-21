@@ -7,6 +7,12 @@ angular.module('hackuci2015')
 
     angular.extend(vm, {
       name: 'MatchesCtrl',
+
+      matchUser: function (userId) {
+        $('#user-id-' + userId)
+          .html('Matched!')
+          .prop('disabled', true);
+      }
     });
 
     UserFactory.getUsers()
