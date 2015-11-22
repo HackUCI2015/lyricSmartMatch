@@ -38,7 +38,6 @@ angular.module('hackuci2015')
           }
         }).then(function (data) {
           console.log(data);
-          vm.showSimpleToast();
         })
       }
     });

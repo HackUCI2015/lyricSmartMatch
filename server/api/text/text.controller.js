@@ -12,7 +12,13 @@ function handleError (res, err) {
 function sendTextMessage(user, otherUser) {
   request.post({
     url: 'https://api.shoutpoint.com/v0/Dials/SMS',
-    body:'{"call":{"no":"' + user.phone_number + '","caller_id_no":"19494316294"},"message":"Hey ' + user.user_name + ', ' + otherUser.user_name + 'wants to talk to you."}',
+    json: {
+      call: {
+        no: otherUser.phone_number,
+        caller_id_no: '19494316294'
+      },
+      message: 'Hey ' + user.user_name + ', ' + otherUser.user_name + ' wants to talk to you.'
+    },
     headers: {
       'X-API-Key': 'TdHDHOP2PmagjJhbnvdBUzQhej0wMyE0',
       'Content-Type': 'application/json'
@@ -37,7 +43,6 @@ exports.index = function (req, res) {
 
   sendTextMessage(user, otherUser);
   sendTextMessage(otherUser, user);
-
 };
 
 
