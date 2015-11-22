@@ -1,7 +1,7 @@
 .md-toolbar-tools-bottom {
   text-align: right;
   margin: 0 em(10) em(10) 0;
-  font-size: em(16);
+  font-size: em(20);
 
   div:last-child {
     font-size: em(12);
@@ -22,5 +22,5 @@ md-sidenav {
 }
 
 .md-sidenav-left md-toolbar {
-  // background-color: $sidenav-background-color;
+  background-color: $sidenav-background-color;
 }

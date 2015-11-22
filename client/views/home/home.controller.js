@@ -1,17 +1,18 @@
 'use strict';
 
 angular.module('hackuci2015')
-  .controller('HomeCtrl', function ($rootScope, $location) {
+  .controller('HomeCtrl', function (UserFactory, $location) {
 
     var vm = this;
 
     angular.extend(vm, {
-      name: 'HomeCtrl',
+      name: '',
 
       login: function () {
-        $rootScope.user = {
-          name: 'vnguyen94'
-        }
+        UserFactory.currentUser = {
+          name: vm.name
+        };
+
         $location.path('/analyze');
       }
     });

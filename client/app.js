@@ -16,7 +16,11 @@ angular.module('hackuci2015', [
     $locationProvider.html5Mode(true);
 
   })
-  .run(function ($rootScope, $location, $mdSidenav) {
+  .run(function ($rootScope, $location, $mdSidenav, UserFactory) {
+
+    $rootScope.user = {
+      name: 'Not logged in'
+    };
 
     angular.extend($rootScope, {
       toggleSidenav: function (menuId) {
@@ -35,8 +39,13 @@ angular.module('hackuci2015', [
         }
       },
 
-      user: {
-        email: 'vnguyen94@gmail.com'
+      getCurrentUser: function () {
+        return UserFactory.currentUser;
+      },
+
+      logout: function () {
+        UserFactory.currentUser = {};
+        $location.path('/');
       },
 
       menuItems: [
@@ -48,12 +57,12 @@ angular.module('hackuci2015', [
         {
           link: '/analyze',
           title: 'Analyze',
-          disabledIfLoggedOut: false
+          disabledIfLoggedOut: true
         },
         {
           link: '/matches',
           title: 'Matches',
-          disabledIfLoggedOut: false
+          disabledIfLoggedOut: true
         }
       ]
     });

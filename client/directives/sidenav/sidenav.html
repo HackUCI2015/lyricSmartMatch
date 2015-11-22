@@ -6,17 +6,9 @@
   <md-toolbar class="md-tall md-sidenav">
     <span flex></span>
     <div
-      ng-if="user.email"
       layout="column"
       class="md-toolbar-tools-bottom inset">
-      <div>{{ user.firstName + ' ' + user.lastName }}</div>
-      <div>{{ user.email }}</div>
-    </div>
-    <div
-      ng-if="!user.email"
-      layout="column"
-      class="md-toolbar-tools-bottom inset">
-      <div>Not Logged in</div>
+      <div>{{ user.name ? user.name : 'Not Logged In '}}</div>
     </div>
   </md-toolbar>
   <md-list>
@@ -24,7 +16,7 @@
       <md-button
         ng-click="navigate(item.link)"
         ng-class="{ active:isActive(item.link) }"
-        ng-disabled="item.disabledIfLoggedOut && !user.email">
+        ng-disabled="item.disabledIfLoggedOut && !user.name">
         {{ item.title }}
       </md-button>
     </md-item>

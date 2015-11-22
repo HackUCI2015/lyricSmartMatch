@@ -4,6 +4,8 @@ angular.module('hackuci2015')
   .factory('UserFactory', function ($http, $q) {
 
     return {
+      currentUser: {},
+
       getUsers: function () {
         return $q(function (resolve, reject) {
           $http({
