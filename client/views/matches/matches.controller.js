@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hackuci2015')
-  .controller('MatchesCtrl', function (UserFactory) {
+  .controller('MatchesCtrl', function (UserFactory, $http) {
 
     var vm = this;
 
@@ -12,6 +12,15 @@ angular.module('hackuci2015')
         $('#user-id-' + userId)
           .html('Matched!')
           .prop('disabled', true);
+
+        $http({
+          method: 'POST',
+          url: '/api/match',
+          params: {
+            userId: UserFactory.getCurrentUser().id,
+            otherUserId: userId
+          }
+        });
       }
     });
 
