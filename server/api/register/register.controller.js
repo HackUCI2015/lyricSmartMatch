@@ -5,13 +5,14 @@ var pg = require('pg');
 
 var conString = require('../../config/environment').conString;
 
+
 function handleError (res, err) {
   return res.status(500).send(err);
 }
 
 
 /**
- * Get list of Login
+ * Get list of Register
  *
  * @param req
  * @param res
@@ -24,25 +25,37 @@ exports.index = function (req, res) {
       return console.error('error fetching client from pool', err);
     }
 
-    var query = "SELECT id from users WHERE user_name = '" + req.query.name + "'";
+    var query = (
+      "INSERT INTO users(user_name, phone_number) VALUES ('" +
+      req.query.user_name + "', '" + req.query.phone_number + "')"
+    );
 
     client.query(query, function (err, result) {
-      //call `done()` to release the client back to the pool 
-      done();
-      
+
       if (err) {
         return console.error('error running query', err);
       }
 
-      console.log(result.rows[0]);
-      res.status(200).json(result.rows[0]);
+      var query2 = "SELECT user_name, id from users WHERE user_name = '" + req.query.user_name + "'";
+
+      client.query(query2, function (err, result2) {
+        //call `done()` to release the client back to the pool 
+        done();
+        
+        if (err) {
+          return console.error('error running query', err);
+        }
+
+        console.log(result.rows[0]);
+        res.status(200).json(result2.rows[0]);
+      });
     });
   });
 };
 
 
 /**
- * Get a single Login
+ * Get a single Register
  *
  * @param req
  * @param res
@@ -53,7 +66,7 @@ exports.show = function (req, res) {
 
 
 /**
- * Creates a new Login in the DB.
+ * Creates a new Register in the DB.
  *
  * @param req
  * @param res
@@ -64,7 +77,7 @@ exports.create = function (req, res) {
 
 
 /**
- * Updates an existing Login in the DB.
+ * Updates an existing Register in the DB.
  *
  * @param req
  * @param res
@@ -75,7 +88,7 @@ exports.update = function (req, res) {
 
 
 /**
- * Deletes a Login from the DB.
+ * Deletes a Register from the DB.
  *
  * @param req
  * @param res

@@ -1,0 +1,943 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.2
+4 verbose readDependencies loading dependencies from C:\Users\Van\workspace\hackuci2015\package.json
+5 warn package.json hackuci2015@0.1.0 No description
+6 warn package.json hackuci2015@0.1.0 No repository field.
+7 warn package.json hackuci2015@0.1.0 No license field.
+8 verbose install where, deps [ 'C:\\Users\\Van\\workspace\\hackuci2015',
+8 verbose install   [ 'async',
+8 verbose install     'body-parser',
+8 verbose install     'browser-sync',
+8 verbose install     'chalk',
+8 verbose install     'compression',
+8 verbose install     'cookie-parser',
+8 verbose install     'express',
+8 verbose install     'lodash',
+8 verbose install     'lyrics-fetcher',
+8 verbose install     'method-override',
+8 verbose install     'morgan',
+8 verbose install     'ripe',
+8 verbose install     'shoutpoint-api-sdk',
+8 verbose install     'watson-developer-cloud',
+8 verbose install     'apidoc',
+8 verbose install     'del',
+8 verbose install     'errorhandler',
+8 verbose install     'gulp',
+8 verbose install     'gulp-angular-filesort',
+8 verbose install     'gulp-angular-templatecache',
+8 verbose install     'gulp-autoprefixer',
+8 verbose install     'gulp-bump',
+8 verbose install     'gulp-concat',
+8 verbose install     'gulp-css-url-rebase',
+8 verbose install     'gulp-git',
+8 verbose install     'gulp-inject',
+8 verbose install     'gulp-jscs',
+8 verbose install     'gulp-jscs-stylish',
+8 verbose install     'gulp-jshint',
+8 verbose install     'gulp-minify-css',
+8 verbose install     'gulp-mocha',
+8 verbose install     'gulp-ng-annotate',
+8 verbose install     'gulp-nodemon',
+8 verbose install     'gulp-open',
+8 verbose install     'gulp-plumber',
+8 verbose install     'gulp-protractor',
+8 verbose install     'gulp-rev-all',
+8 verbose install     'gulp-sass',
+8 verbose install     'gulp-uglify',
+8 verbose install     'gulp-usemin',
+8 verbose install     'gulp-util',
+8 verbose install     'gulp-wait',
+8 verbose install     'gulp-watch',
+8 verbose install     'jshint-stylish',
+8 verbose install     'karma',
+8 verbose install     'karma-jasmine',
+8 verbose install     'karma-ng-html2js-preprocessor',
+8 verbose install     'karma-phantomjs-launcher',
+8 verbose install     'main-bower-files',
+8 verbose install     'pg',
+8 verbose install     'run-sequence',
+8 verbose install     'should',
+8 verbose install     'streamqueue',
+8 verbose install     'supertest' ] ]
+9 verbose install where, peers [ 'C:\\Users\\Van\\workspace\\hackuci2015', [] ]
+10 verbose installManyTop reading for lifecycle C:\Users\Van\workspace\hackuci2015\package.json
+11 info preinstall hackuci2015@0.1.0
+12 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\apidoc\package.json
+13 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\async\package.json
+14 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\body-parser\package.json
+15 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\browser-sync\package.json
+16 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\chalk\package.json
+17 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\compression\package.json
+18 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\cookie-parser\package.json
+19 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\del\package.json
+20 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\errorhandler\package.json
+21 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\express\package.json
+22 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp\package.json
+23 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-angular-filesort\package.json
+24 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-angular-templatecache\package.json
+25 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-autoprefixer\package.json
+26 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-bump\package.json
+27 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-concat\package.json
+28 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-css-url-rebase\package.json
+29 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-git\package.json
+30 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-inject\package.json
+31 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-jscs\package.json
+32 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-jscs-stylish\package.json
+33 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-jshint\package.json
+34 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-minify-css\package.json
+35 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-mocha\package.json
+36 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-ng-annotate\package.json
+37 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-nodemon\package.json
+38 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-open\package.json
+39 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-plumber\package.json
+40 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-protractor\package.json
+41 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-rev-all\package.json
+42 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-sass\package.json
+43 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-uglify\package.json
+44 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-usemin\package.json
+45 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-util\package.json
+46 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-wait\package.json
+47 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-watch\package.json
+48 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\jasmine-core\package.json
+49 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\jshint-stylish\package.json
+50 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\karma\package.json
+51 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\karma-jasmine\package.json
+52 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\karma-ng-html2js-preprocessor\package.json
+53 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\karma-phantomjs-launcher\package.json
+54 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\lodash\package.json
+55 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\lyrics-fetcher\package.json
+56 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\main-bower-files\package.json
+57 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\method-override\package.json
+58 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\morgan\package.json
+59 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\msnodesql\package.json
+60 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\node-sqlserver-unofficial\package.json
+61 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\pg\package.json
+62 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\phantomjs\package.json
+63 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\querystring\package.json
+64 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\request-promise\package.json
+65 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\ripe\package.json
+66 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\run-sequence\package.json
+67 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\should\package.json
+68 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\spotify-web-api-node\package.json
+69 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\streamqueue\package.json
+70 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\supertest\package.json
+71 verbose installManyTop reading scoped package data from C:\Users\Van\workspace\hackuci2015\node_modules\watson-developer-cloud\package.json
+72 info package.json apidoc@0.13.1 license should be a valid SPDX license expression
+73 info package.json gulp-inject@1.5.0 No license field.
+74 info package.json gulp-protractor@1.0.0 No license field.
+75 info package.json querystring@0.2.0 querystring is also the name of a node core module.
+76 info package.json querystring@0.2.0 No license field.
+77 info package.json streamqueue@1.1.1 No license field.
+78 info package.json msnodesql@0.2.1 No license field.
+79 info package.json node-sqlserver-unofficial@1.4.0 No license field.
+80 verbose readDependencies loading dependencies from C:\Users\Van\workspace\hackuci2015\package.json
+81 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\apidoc\package.json
+82 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\async\package.json
+83 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\body-parser\package.json
+84 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\browser-sync\package.json
+85 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\chalk\package.json
+86 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\compression\package.json
+87 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\cookie-parser\package.json
+88 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\del\package.json
+89 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\errorhandler\package.json
+90 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\express\package.json
+91 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp\package.json
+92 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-angular-filesort\package.json
+93 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-angular-templatecache\package.json
+94 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-autoprefixer\package.json
+95 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-bump\package.json
+96 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-concat\package.json
+97 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-css-url-rebase\package.json
+98 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-git\package.json
+99 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-inject\package.json
+100 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-jscs\package.json
+101 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-jscs-stylish\package.json
+102 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-jshint\package.json
+103 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-minify-css\package.json
+104 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-mocha\package.json
+105 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-ng-annotate\package.json
+106 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-nodemon\package.json
+107 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-open\package.json
+108 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-plumber\package.json
+109 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-protractor\package.json
+110 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-rev-all\package.json
+111 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-sass\package.json
+112 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-uglify\package.json
+113 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-usemin\package.json
+114 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-util\package.json
+115 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-wait\package.json
+116 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\gulp-watch\package.json
+117 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\jasmine-core\package.json
+118 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\jshint-stylish\package.json
+119 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\karma\package.json
+120 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\karma-jasmine\package.json
+121 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\karma-ng-html2js-preprocessor\package.json
+122 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\karma-phantomjs-launcher\package.json
+123 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\lodash\package.json
+124 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\lyrics-fetcher\package.json
+125 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\main-bower-files\package.json
+126 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\method-override\package.json
+127 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\morgan\package.json
+128 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\msnodesql\package.json
+129 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\node-sqlserver-unofficial\package.json
+130 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\pg\package.json
+131 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\phantomjs\package.json
+132 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\querystring\package.json
+133 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\request-promise\package.json
+134 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\ripe\package.json
+135 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\run-sequence\package.json
+136 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\should\package.json
+137 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\spotify-web-api-node\package.json
+138 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\streamqueue\package.json
+139 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\supertest\package.json
+140 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\watson-developer-cloud\package.json
+141 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\apidoc\package.json
+142 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\apidoc.cmd\package.json
+143 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\browser-sync\package.json
+144 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\browser-sync.cmd\package.json
+145 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\gulp\package.json
+146 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\gulp.cmd\package.json
+147 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\karma\package.json
+148 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\karma.cmd\package.json
+149 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\lyr\package.json
+150 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\lyr.cmd\package.json
+151 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\phantomjs\package.json
+152 verbose targetResolver reading package data from C:\Users\Van\workspace\hackuci2015\node_modules\.bin\phantomjs.cmd\package.json
+153 verbose already installed skipping watson-developer-cloud@^1.0.3 C:\Users\Van\workspace\hackuci2015
+154 verbose already installed skipping apidoc@^0.13.1 C:\Users\Van\workspace\hackuci2015
+155 verbose already installed skipping del@^2.0.2 C:\Users\Van\workspace\hackuci2015
+156 verbose already installed skipping errorhandler@^1.3.3 C:\Users\Van\workspace\hackuci2015
+157 verbose already installed skipping gulp@^3.8.10 C:\Users\Van\workspace\hackuci2015
+158 verbose already installed skipping gulp-angular-filesort@^1.1.1 C:\Users\Van\workspace\hackuci2015
+159 verbose already installed skipping gulp-angular-templatecache@^1.5.0 C:\Users\Van\workspace\hackuci2015
+160 verbose already installed skipping gulp-autoprefixer@^3.0.1 C:\Users\Van\workspace\hackuci2015
+161 verbose already installed skipping gulp-bump@^0.3.0 C:\Users\Van\workspace\hackuci2015
+162 verbose already installed skipping gulp-concat@^2.4.3 C:\Users\Van\workspace\hackuci2015
+163 verbose already installed skipping gulp-css-url-rebase@^0.2.0 C:\Users\Van\workspace\hackuci2015
+164 verbose already installed skipping gulp-git@^1.0.0 C:\Users\Van\workspace\hackuci2015
+165 verbose already installed skipping gulp-inject@^1.1.1 C:\Users\Van\workspace\hackuci2015
+166 verbose already installed skipping gulp-jscs@^2.0.0 C:\Users\Van\workspace\hackuci2015
+167 verbose already installed skipping gulp-jscs-stylish@^1.0.2 C:\Users\Van\workspace\hackuci2015
+168 verbose already installed skipping gulp-jshint@^1.9.1 C:\Users\Van\workspace\hackuci2015
+169 verbose already installed skipping gulp-minify-css@^1.0.0 C:\Users\Van\workspace\hackuci2015
+170 verbose already installed skipping gulp-mocha@^2.0.0 C:\Users\Van\workspace\hackuci2015
+171 verbose already installed skipping gulp-ng-annotate@^1.1.0 C:\Users\Van\workspace\hackuci2015
+172 verbose already installed skipping gulp-nodemon@^2.0.2 C:\Users\Van\workspace\hackuci2015
+173 verbose already installed skipping gulp-open@^1.0.0 C:\Users\Van\workspace\hackuci2015
+174 verbose already installed skipping gulp-plumber@^1.0.0 C:\Users\Van\workspace\hackuci2015
+175 verbose already installed skipping gulp-protractor@^1.0.0 C:\Users\Van\workspace\hackuci2015
+176 verbose already installed skipping gulp-rev-all@0.8.18 C:\Users\Van\workspace\hackuci2015
+177 verbose already installed skipping gulp-sass@^2.0.4 C:\Users\Van\workspace\hackuci2015
+178 verbose already installed skipping gulp-uglify@^1.1.0 C:\Users\Van\workspace\hackuci2015
+179 verbose already installed skipping gulp-usemin@^0.3.11 C:\Users\Van\workspace\hackuci2015
+180 verbose already installed skipping gulp-util@^3.0.2 C:\Users\Van\workspace\hackuci2015
+181 verbose already installed skipping gulp-wait@^0.0.2 C:\Users\Van\workspace\hackuci2015
+182 verbose already installed skipping gulp-watch@^4.1.0 C:\Users\Van\workspace\hackuci2015
+183 verbose already installed skipping jshint-stylish@^2.0.1 C:\Users\Van\workspace\hackuci2015
+184 verbose already installed skipping karma@^0.13.9 C:\Users\Van\workspace\hackuci2015
+185 verbose already installed skipping karma-jasmine@^0.3.5 C:\Users\Van\workspace\hackuci2015
+186 verbose already installed skipping karma-ng-html2js-preprocessor@^0.1.2 C:\Users\Van\workspace\hackuci2015
+187 verbose already installed skipping karma-phantomjs-launcher@^0.2.1 C:\Users\Van\workspace\hackuci2015
+188 verbose already installed skipping main-bower-files@^2.5.0 C:\Users\Van\workspace\hackuci2015
+189 verbose already installed skipping pg@^4.4.3 C:\Users\Van\workspace\hackuci2015
+190 verbose already installed skipping run-sequence@^1.0.2 C:\Users\Van\workspace\hackuci2015
+191 verbose already installed skipping should@^7.1.0 C:\Users\Van\workspace\hackuci2015
+192 verbose already installed skipping streamqueue@^1.1.1 C:\Users\Van\workspace\hackuci2015
+193 verbose already installed skipping supertest@^1.1.0 C:\Users\Van\workspace\hackuci2015
+194 verbose already installed skipping async@^1.5.0 C:\Users\Van\workspace\hackuci2015
+195 verbose already installed skipping body-parser@^1.12.0 C:\Users\Van\workspace\hackuci2015
+196 verbose already installed skipping browser-sync@^2.5.3 C:\Users\Van\workspace\hackuci2015
+197 verbose already installed skipping chalk@^1.0.0 C:\Users\Van\workspace\hackuci2015
+198 verbose already installed skipping compression@^1.4.0 C:\Users\Van\workspace\hackuci2015
+199 verbose already installed skipping cookie-parser@^1.3.3 C:\Users\Van\workspace\hackuci2015
+200 verbose already installed skipping express@^4.12.2 C:\Users\Van\workspace\hackuci2015
+201 verbose already installed skipping lodash@^3.3.1 C:\Users\Van\workspace\hackuci2015
+202 verbose already installed skipping lyrics-fetcher@^1.0.1 C:\Users\Van\workspace\hackuci2015
+203 verbose already installed skipping method-override@^2.3.1 C:\Users\Van\workspace\hackuci2015
+204 verbose already installed skipping morgan@^1.5.1 C:\Users\Van\workspace\hackuci2015
+205 verbose already installed skipping ripe@^0.2.0 C:\Users\Van\workspace\hackuci2015
+206 silly cache add args [ 'shoutpoint-api-sdk@^0.4.4', null ]
+207 verbose cache add spec shoutpoint-api-sdk@^0.4.4
+208 silly cache add parsed spec Result {
+208 silly cache add   raw: 'shoutpoint-api-sdk@^0.4.4',
+208 silly cache add   scope: null,
+208 silly cache add   name: 'shoutpoint-api-sdk',
+208 silly cache add   rawSpec: '^0.4.4',
+208 silly cache add   spec: '>=0.4.4 <0.5.0',
+208 silly cache add   type: 'range' }
+209 silly addNamed shoutpoint-api-sdk@>=0.4.4 <0.5.0
+210 verbose addNamed ">=0.4.4 <0.5.0" is a valid semver range for shoutpoint-api-sdk
+211 silly addNameRange { name: 'shoutpoint-api-sdk',
+211 silly addNameRange   range: '>=0.4.4 <0.5.0',
+211 silly addNameRange   hasData: false }
+212 silly mapToRegistry name shoutpoint-api-sdk
+213 silly mapToRegistry using default registry
+214 silly mapToRegistry registry https://registry.npmjs.org/
+215 silly mapToRegistry uri https://registry.npmjs.org/shoutpoint-api-sdk
+216 verbose addNameRange registry:https://registry.npmjs.org/shoutpoint-api-sdk not in flight; fetching
+217 verbose request uri https://registry.npmjs.org/shoutpoint-api-sdk
+218 verbose request no auth needed
+219 info attempt registry request try #1 at 6:25:13 PM
+220 verbose request id c3d993f6c719c4cc
+221 http request GET https://registry.npmjs.org/shoutpoint-api-sdk
+222 http 200 https://registry.npmjs.org/shoutpoint-api-sdk
+223 silly get cb [ 200,
+223 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+223 silly get     etag: '"AFXBGRW1JG4HDBCME8F7JVPBY"',
+223 silly get     'content-type': 'application/json',
+223 silly get     'cache-control': 'max-age=60',
+223 silly get     'content-length': '7638',
+223 silly get     'accept-ranges': 'bytes',
+223 silly get     date: 'Sun, 22 Nov 2015 02:24:40 GMT',
+223 silly get     via: '1.1 varnish',
+223 silly get     age: '0',
+223 silly get     connection: 'keep-alive',
+223 silly get     'x-served-by': 'cache-lax1435-LAX',
+223 silly get     'x-cache': 'MISS',
+223 silly get     'x-cache-hits': '0',
+223 silly get     'x-timer': 'S1448159080.861876,VS0,VE48',
+223 silly get     vary: 'Accept' } ]
+224 verbose get saving shoutpoint-api-sdk to C:\Users\Van\AppData\Roaming\npm-cache\registry.npmjs.org\shoutpoint-api-sdk\.cache.json
+225 silly addNameRange number 2 { name: 'shoutpoint-api-sdk',
+225 silly addNameRange   range: '>=0.4.4 <0.5.0',
+225 silly addNameRange   hasData: true }
+226 silly addNameRange versions [ 'shoutpoint-api-sdk', [ '0.4.1', '0.4.2', '0.4.3', '0.4.4' ] ]
+227 silly addNamed shoutpoint-api-sdk@0.4.4
+228 verbose addNamed "0.4.4" is a plain semver version for shoutpoint-api-sdk
+229 silly mapToRegistry name shoutpoint-api-sdk
+230 silly mapToRegistry using default registry
+231 silly mapToRegistry registry https://registry.npmjs.org/
+232 silly mapToRegistry uri https://registry.npmjs.org/shoutpoint-api-sdk
+233 verbose addRemoteTarball https://registry.npmjs.org/shoutpoint-api-sdk/-/shoutpoint-api-sdk-0.4.4.tgz not in flight; adding
+234 verbose addRemoteTarball [ 'https://registry.npmjs.org/shoutpoint-api-sdk/-/shoutpoint-api-sdk-0.4.4.tgz',
+234 verbose addRemoteTarball   'e177e0d8e497ef053168e1f256542d1620a50f45' ]
+235 info retry fetch attempt 1 at 6:25:13 PM
+236 info attempt registry request try #1 at 6:25:13 PM
+237 http fetch GET https://registry.npmjs.org/shoutpoint-api-sdk/-/shoutpoint-api-sdk-0.4.4.tgz
+238 http fetch 200 https://registry.npmjs.org/shoutpoint-api-sdk/-/shoutpoint-api-sdk-0.4.4.tgz
+239 silly fetchAndShaCheck shasum e177e0d8e497ef053168e1f256542d1620a50f45
+240 verbose addTmpTarball C:\Users\Van\AppData\Local\Temp\npm-7464-86db7433\registry.npmjs.org\shoutpoint-api-sdk\-\shoutpoint-api-sdk-0.4.4.tgz not in flight; adding
+241 verbose addTmpTarball already have metadata; skipping unpack for shoutpoint-api-sdk@0.4.4
+242 silly cache afterAdd shoutpoint-api-sdk@0.4.4
+243 verbose afterAdd C:\Users\Van\AppData\Roaming\npm-cache\shoutpoint-api-sdk\0.4.4\package\package.json not in flight; writing
+244 verbose afterAdd C:\Users\Van\AppData\Roaming\npm-cache\shoutpoint-api-sdk\0.4.4\package\package.json written
+245 silly install resolved [ { name: 'shoutpoint-api-sdk',
+245 silly install resolved     version: '0.4.4',
+245 silly install resolved     private: false,
+245 silly install resolved     description: 'SDK for Shoutpoint API\'s: Dials, LiveCalls, LiveIVR, PhoneNumbers',
+245 silly install resolved     main: 'index.js',
+245 silly install resolved     scripts: { test: 'mocha test' },
+245 silly install resolved     repository:
+245 silly install resolved      { type: 'git',
+245 silly install resolved        url: 'git://github.com/shoutpoint-inc/api-js-sdk.git' },
+245 silly install resolved     keywords:
+245 silly install resolved      [ 'shoutpoint',
+245 silly install resolved        'sdk',
+245 silly install resolved        'livecalls',
+245 silly install resolved        'liveivr',
+245 silly install resolved        'dials',
+245 silly install resolved        'phonenumbers',
+245 silly install resolved        'ivr',
+245 silly install resolved        'phone',
+245 silly install resolved        'numbers' ],
+245 silly install resolved     author: { name: 'Arvind Sontha' },
+245 silly install resolved     license: 'MIT',
+245 silly install resolved     devDependencies:
+245 silly install resolved      { chai: '^3.4.1',
+245 silly install resolved        del: '^2.1.0',
+245 silly install resolved        gulp: '^3.9.0',
+245 silly install resolved        'gulp-jsdoc': '^0.1.5',
+245 silly install resolved        mocha: '^2.3.4' },
+245 silly install resolved     dependencies: { q: '^1.4.1' },
+245 silly install resolved     gitHead: 'a2ca06030743d138e48203f4ca31a83ddf473f99',
+245 silly install resolved     bugs: { url: 'https://github.com/shoutpoint-inc/api-js-sdk/issues' },
+245 silly install resolved     homepage: 'https://github.com/shoutpoint-inc/api-js-sdk#readme',
+245 silly install resolved     _id: 'shoutpoint-api-sdk@0.4.4',
+245 silly install resolved     _shasum: 'e177e0d8e497ef053168e1f256542d1620a50f45',
+245 silly install resolved     _from: 'shoutpoint-api-sdk@>=0.4.4 <0.5.0',
+245 silly install resolved     _npmVersion: '3.3.10',
+245 silly install resolved     _nodeVersion: '4.2.2',
+245 silly install resolved     _npmUser: { name: 'api-developer', email: 'developers@shoutpoint.com' },
+245 silly install resolved     dist:
+245 silly install resolved      { shasum: 'e177e0d8e497ef053168e1f256542d1620a50f45',
+245 silly install resolved        tarball: 'http://registry.npmjs.org/shoutpoint-api-sdk/-/shoutpoint-api-sdk-0.4.4.tgz' },
+245 silly install resolved     maintainers: [ [Object] ],
+245 silly install resolved     directories: {},
+245 silly install resolved     _resolved: 'https://registry.npmjs.org/shoutpoint-api-sdk/-/shoutpoint-api-sdk-0.4.4.tgz' } ]
+246 info install shoutpoint-api-sdk@0.4.4 into C:\Users\Van\workspace\hackuci2015
+247 info installOne shoutpoint-api-sdk@0.4.4
+248 verbose installOne of shoutpoint-api-sdk to C:\Users\Van\workspace\hackuci2015 not in flight; installing
+249 verbose lock using C:\Users\Van\AppData\Roaming\npm-cache\_locks\shoutpoint-api-sdk-0e84105c7f95f47a.lock for C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk
+250 silly install write writing shoutpoint-api-sdk 0.4.4 to C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk
+251 verbose unbuild node_modules\shoutpoint-api-sdk
+252 silly gentlyRm C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk is being purged from base C:\Users\Van\workspace\hackuci2015
+253 verbose gentlyRm don't care about contents; nuking C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk
+254 verbose tar unpack C:\Users\Van\AppData\Roaming\npm-cache\shoutpoint-api-sdk\0.4.4\package.tgz
+255 verbose tar unpacking to C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk
+256 silly gentlyRm C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk is being purged
+257 verbose gentlyRm don't care about contents; nuking C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk
+258 silly gunzTarPerm modes [ '777', '666' ]
+259 silly gunzTarPerm extractEntry package.json
+260 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+261 silly gunzTarPerm extractEntry .npmignore
+262 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+263 silly gunzTarPerm extractEntry README.md
+264 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+265 silly gunzTarPerm extractEntry gulpfile.js
+266 silly gunzTarPerm modified mode [ 'gulpfile.js', 420, 438 ]
+267 silly gunzTarPerm extractEntry index.js
+268 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+269 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Dials.html
+270 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Dials.html',
+270 silly gunzTarPerm   420,
+270 silly gunzTarPerm   438 ]
+271 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Collect.html
+272 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Collect.html',
+272 silly gunzTarPerm   420,
+272 silly gunzTarPerm   438 ]
+273 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Hold.html
+274 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Hold.html',
+274 silly gunzTarPerm   420,
+274 silly gunzTarPerm   438 ]
+275 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Join.html
+276 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Join.html',
+276 silly gunzTarPerm   420,
+276 silly gunzTarPerm   438 ]
+277 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Leave.html
+278 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Leave.html',
+278 silly gunzTarPerm   420,
+278 silly gunzTarPerm   438 ]
+279 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Mute.html
+280 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Mute.html',
+280 silly gunzTarPerm   420,
+280 silly gunzTarPerm   438 ]
+281 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Resume.html
+282 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Resume.html',
+282 silly gunzTarPerm   420,
+282 silly gunzTarPerm   438 ]
+283 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Tell.html
+284 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Tell.html',
+284 silly gunzTarPerm   420,
+284 silly gunzTarPerm   438 ]
+285 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Transfer.html
+286 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Transfer.html',
+286 silly gunzTarPerm   420,
+286 silly gunzTarPerm   438 ]
+287 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Unmute.html
+288 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-Unmute.html',
+288 silly gunzTarPerm   420,
+288 silly gunzTarPerm   438 ]
+289 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-VoiceMail.html
+290 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-VoiceMail.html',
+290 silly gunzTarPerm   420,
+290 silly gunzTarPerm   438 ]
+291 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions.html
+292 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions.html',
+292 silly gunzTarPerm   420,
+292 silly gunzTarPerm   438 ]
+293 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/ClickToTalk-Call.html
+294 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/ClickToTalk-Call.html',
+294 silly gunzTarPerm   420,
+294 silly gunzTarPerm   438 ]
+295 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/ClickToTalk-Connect.html
+296 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/ClickToTalk-Connect.html',
+296 silly gunzTarPerm   420,
+296 silly gunzTarPerm   438 ]
+297 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/ClickToTalk.html
+298 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/ClickToTalk.html',
+298 silly gunzTarPerm   420,
+298 silly gunzTarPerm   438 ]
+299 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Debug-CallDetail.html
+300 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Debug-CallDetail.html',
+300 silly gunzTarPerm   420,
+300 silly gunzTarPerm   438 ]
+301 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Debug-Logs.html
+302 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Debug-Logs.html',
+302 silly gunzTarPerm   420,
+302 silly gunzTarPerm   438 ]
+303 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Debug.html
+304 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Debug.html',
+304 silly gunzTarPerm   420,
+304 silly gunzTarPerm   438 ]
+305 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Dials-Connect.html
+306 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Dials-Connect.html',
+306 silly gunzTarPerm   420,
+306 silly gunzTarPerm   438 ]
+307 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Dials-SMS.html
+308 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Dials-SMS.html',
+308 silly gunzTarPerm   420,
+308 silly gunzTarPerm   438 ]
+309 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-HangUp.html
+310 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/Actions-HangUp.html',
+310 silly gunzTarPerm   420,
+310 silly gunzTarPerm   438 ]
+311 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/LiveCalls.html
+312 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/LiveCalls.html',
+312 silly gunzTarPerm   420,
+312 silly gunzTarPerm   438 ]
+313 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/LiveIVR-Configure.html
+314 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/LiveIVR-Configure.html',
+314 silly gunzTarPerm   420,
+314 silly gunzTarPerm   438 ]
+315 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/LiveIVR-ListConfig.html
+316 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/LiveIVR-ListConfig.html',
+316 silly gunzTarPerm   420,
+316 silly gunzTarPerm   438 ]
+317 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/LiveIVR-RemoveConfig.html
+318 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/LiveIVR-RemoveConfig.html',
+318 silly gunzTarPerm   420,
+318 silly gunzTarPerm   438 ]
+319 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/LiveIVR.html
+320 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/LiveIVR.html',
+320 silly gunzTarPerm   420,
+320 silly gunzTarPerm   438 ]
+321 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/PhoneNumbers-ListAvailable.html
+322 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/PhoneNumbers-ListAvailable.html',
+322 silly gunzTarPerm   420,
+322 silly gunzTarPerm   438 ]
+323 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/PhoneNumbers-ListProvisioned.html
+324 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/PhoneNumbers-ListProvisioned.html',
+324 silly gunzTarPerm   420,
+324 silly gunzTarPerm   438 ]
+325 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/PhoneNumbers-Provision.html
+326 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/PhoneNumbers-Provision.html',
+326 silly gunzTarPerm   420,
+326 silly gunzTarPerm   438 ]
+327 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/PhoneNumbers-Release.html
+328 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/PhoneNumbers-Release.html',
+328 silly gunzTarPerm   420,
+328 silly gunzTarPerm   438 ]
+329 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/PhoneNumbers.html
+330 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/PhoneNumbers.html',
+330 silly gunzTarPerm   420,
+330 silly gunzTarPerm   438 ]
+331 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/actions.js.html
+332 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/actions.js.html',
+332 silly gunzTarPerm   420,
+332 silly gunzTarPerm   438 ]
+333 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/clicktotalk.js.html
+334 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/clicktotalk.js.html',
+334 silly gunzTarPerm   420,
+334 silly gunzTarPerm   438 ]
+335 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/debug.js.html
+336 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/debug.js.html',
+336 silly gunzTarPerm   420,
+336 silly gunzTarPerm   438 ]
+337 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/dials.js.html
+338 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/dials.js.html',
+338 silly gunzTarPerm   420,
+338 silly gunzTarPerm   438 ]
+339 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/index.html
+340 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/index.html',
+340 silly gunzTarPerm   420,
+340 silly gunzTarPerm   438 ]
+341 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/livecalls.js.html
+342 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/livecalls.js.html',
+342 silly gunzTarPerm   420,
+342 silly gunzTarPerm   438 ]
+343 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/liveivr.js.html
+344 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/liveivr.js.html',
+344 silly gunzTarPerm   420,
+344 silly gunzTarPerm   438 ]
+345 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/phonenumbers.js.html
+346 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/phonenumbers.js.html',
+346 silly gunzTarPerm   420,
+346 silly gunzTarPerm   438 ]
+347 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/scripts/linenumber.js
+348 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/scripts/linenumber.js',
+348 silly gunzTarPerm   420,
+348 silly gunzTarPerm   438 ]
+349 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/scripts/prettify/lang-css.js
+350 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/scripts/prettify/lang-css.js',
+350 silly gunzTarPerm   420,
+350 silly gunzTarPerm   438 ]
+351 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/scripts/prettify/prettify.js
+352 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/scripts/prettify/prettify.js',
+352 silly gunzTarPerm   420,
+352 silly gunzTarPerm   438 ]
+353 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/scripts/prettify/Apache-License-2.0.txt
+354 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/scripts/prettify/Apache-License-2.0.txt',
+354 silly gunzTarPerm   420,
+354 silly gunzTarPerm   438 ]
+355 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/styles/jsdoc-default.css
+356 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/styles/jsdoc-default.css',
+356 silly gunzTarPerm   420,
+356 silly gunzTarPerm   438 ]
+357 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/styles/prettify-jsdoc.css
+358 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/styles/prettify-jsdoc.css',
+358 silly gunzTarPerm   420,
+358 silly gunzTarPerm   438 ]
+359 silly gunzTarPerm extractEntry docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/styles/prettify-tomorrow.css
+360 silly gunzTarPerm modified mode [ 'docs/shoutpoint-api-sdk/shoutpoint-api-sdk/0.0.0/styles/prettify-tomorrow.css',
+360 silly gunzTarPerm   420,
+360 silly gunzTarPerm   438 ]
+361 silly gunzTarPerm extractEntry modules/requestHandler.js
+362 silly gunzTarPerm modified mode [ 'modules/requestHandler.js', 420, 438 ]
+363 silly gunzTarPerm extractEntry modules/dials/clicktotalk.js
+364 silly gunzTarPerm modified mode [ 'modules/dials/clicktotalk.js', 420, 438 ]
+365 silly gunzTarPerm extractEntry modules/dials/dials.js
+366 silly gunzTarPerm modified mode [ 'modules/dials/dials.js', 420, 438 ]
+367 silly gunzTarPerm extractEntry modules/liveCalls/actions.js
+368 silly gunzTarPerm modified mode [ 'modules/liveCalls/actions.js', 420, 438 ]
+369 silly gunzTarPerm extractEntry modules/liveCalls/livecalls.js
+370 silly gunzTarPerm modified mode [ 'modules/liveCalls/livecalls.js', 420, 438 ]
+371 silly gunzTarPerm extractEntry modules/liveIVR/debug.js
+372 silly gunzTarPerm modified mode [ 'modules/liveIVR/debug.js', 420, 438 ]
+373 silly gunzTarPerm extractEntry modules/liveIVR/liveivr.js
+374 silly gunzTarPerm modified mode [ 'modules/liveIVR/liveivr.js', 420, 438 ]
+375 silly gunzTarPerm extractEntry modules/phoneNumbers/phonenumbers.js
+376 silly gunzTarPerm modified mode [ 'modules/phoneNumbers/phonenumbers.js', 420, 438 ]
+377 silly gunzTarPerm extractEntry LISCENCE-MIT
+378 silly gunzTarPerm modified mode [ 'LISCENCE-MIT', 420, 438 ]
+379 verbose write writing to C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\package.json
+380 info preinstall shoutpoint-api-sdk@0.4.4
+381 verbose readDependencies loading dependencies from C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\package.json
+382 silly prepareForInstallMany adding q@^1.4.1 from shoutpoint-api-sdk dependencies
+383 verbose readDependencies loading dependencies from C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\package.json
+384 silly cache add args [ 'q@^1.4.1', null ]
+385 verbose cache add spec q@^1.4.1
+386 silly cache add parsed spec Result {
+386 silly cache add   raw: 'q@^1.4.1',
+386 silly cache add   scope: null,
+386 silly cache add   name: 'q',
+386 silly cache add   rawSpec: '^1.4.1',
+386 silly cache add   spec: '>=1.4.1 <2.0.0',
+386 silly cache add   type: 'range' }
+387 silly addNamed q@>=1.4.1 <2.0.0
+388 verbose addNamed ">=1.4.1 <2.0.0" is a valid semver range for q
+389 silly addNameRange { name: 'q', range: '>=1.4.1 <2.0.0', hasData: false }
+390 silly mapToRegistry name q
+391 silly mapToRegistry using default registry
+392 silly mapToRegistry registry https://registry.npmjs.org/
+393 silly mapToRegistry uri https://registry.npmjs.org/q
+394 verbose addNameRange registry:https://registry.npmjs.org/q not in flight; fetching
+395 verbose request uri https://registry.npmjs.org/q
+396 verbose request no auth needed
+397 info attempt registry request try #1 at 6:25:14 PM
+398 verbose etag "1RCRJ7P4U58APEIGOEZWC7A41"
+399 http request GET https://registry.npmjs.org/q
+400 http 304 https://registry.npmjs.org/q
+401 silly get cb [ 304,
+401 silly get   { date: 'Sun, 22 Nov 2015 02:24:41 GMT',
+401 silly get     via: '1.1 varnish',
+401 silly get     'cache-control': 'max-age=60',
+401 silly get     etag: '"1RCRJ7P4U58APEIGOEZWC7A41"',
+401 silly get     age: '45',
+401 silly get     connection: 'keep-alive',
+401 silly get     'x-served-by': 'cache-lax1434-LAX',
+401 silly get     'x-cache': 'HIT',
+401 silly get     'x-cache-hits': '3',
+401 silly get     'x-timer': 'S1448159081.652220,VS0,VE0',
+401 silly get     vary: 'Accept' } ]
+402 verbose etag https://registry.npmjs.org/q from cache
+403 verbose get saving q to C:\Users\Van\AppData\Roaming\npm-cache\registry.npmjs.org\q\.cache.json
+404 silly addNameRange number 2 { name: 'q', range: '>=1.4.1 <2.0.0', hasData: true }
+405 silly addNameRange versions [ 'q',
+405 silly addNameRange   [ '0.0.0',
+405 silly addNameRange     '0.0.1',
+405 silly addNameRange     '0.0.2',
+405 silly addNameRange     '0.0.3',
+405 silly addNameRange     '0.1.0',
+405 silly addNameRange     '0.1.1',
+405 silly addNameRange     '0.1.2',
+405 silly addNameRange     '0.1.3',
+405 silly addNameRange     '0.1.4',
+405 silly addNameRange     '0.1.5',
+405 silly addNameRange     '0.1.6',
+405 silly addNameRange     '0.1.7',
+405 silly addNameRange     '0.1.8',
+405 silly addNameRange     '0.1.9',
+405 silly addNameRange     '0.2.0-rc1',
+405 silly addNameRange     '0.2.0',
+405 silly addNameRange     '0.2.1',
+405 silly addNameRange     '0.2.2',
+405 silly addNameRange     '0.2.3',
+405 silly addNameRange     '0.2.4',
+405 silly addNameRange     '0.2.5',
+405 silly addNameRange     '0.2.6',
+405 silly addNameRange     '0.2.7',
+405 silly addNameRange     '0.2.8',
+405 silly addNameRange     '0.2.9',
+405 silly addNameRange     '0.3.0',
+405 silly addNameRange     '0.2.10',
+405 silly addNameRange     '0.4.0',
+405 silly addNameRange     '0.4.1',
+405 silly addNameRange     '0.4.2',
+405 silly addNameRange     '0.4.4',
+405 silly addNameRange     '0.5.0',
+405 silly addNameRange     '0.5.1',
+405 silly addNameRange     '0.5.2',
+405 silly addNameRange     '0.5.3',
+405 silly addNameRange     '0.6.0',
+405 silly addNameRange     '0.7.0',
+405 silly addNameRange     '0.7.1',
+405 silly addNameRange     '0.7.2',
+405 silly addNameRange     '0.8.0',
+405 silly addNameRange     '0.8.1',
+405 silly addNameRange     '0.8.2',
+405 silly addNameRange     '0.8.3',
+405 silly addNameRange     '0.8.4',
+405 silly addNameRange     '0.8.5',
+405 silly addNameRange     '0.8.6',
+405 silly addNameRange     '0.8.7',
+405 silly addNameRange     '0.8.8',
+405 silly addNameRange     '0.8.9',
+405 silly addNameRange     '0.8.10',
+405 silly addNameRange     '0.8.11',
+405 silly addNameRange     '0.8.12',
+405 silly addNameRange     '0.9.0',
+405 silly addNameRange     '0.9.1',
+405 silly addNameRange     '0.9.2',
+405 silly addNameRange     '0.9.3',
+405 silly addNameRange     '0.9.4',
+405 silly addNameRange     '0.9.5',
+405 silly addNameRange     '0.9.6',
+405 silly addNameRange     '0.9.7',
+405 silly addNameRange     '1.0.0',
+405 silly addNameRange     '1.0.1',
+405 silly addNameRange     '2.0.0',
+405 silly addNameRange     '2.0.1',
+405 silly addNameRange     '2.0.2',
+405 silly addNameRange     '1.1.0',
+405 silly addNameRange     '1.1.1',
+405 silly addNameRange     '1.1.2',
+405 silly addNameRange     '2.0.3',
+405 silly addNameRange     '1.2.0',
+405 silly addNameRange     '1.2.1',
+405 silly addNameRange     '1.3.0',
+405 silly addNameRange     '1.4.0',
+405 silly addNameRange     '1.4.1' ] ]
+406 silly addNamed q@1.4.1
+407 verbose addNamed "1.4.1" is a plain semver version for q
+408 silly cache afterAdd q@1.4.1
+409 verbose afterAdd C:\Users\Van\AppData\Roaming\npm-cache\q\1.4.1\package\package.json not in flight; writing
+410 verbose afterAdd C:\Users\Van\AppData\Roaming\npm-cache\q\1.4.1\package\package.json written
+411 silly install resolved [ { name: 'q',
+411 silly install resolved     version: '1.4.1',
+411 silly install resolved     description: 'A library for promises (CommonJS/Promises/A,B,D)',
+411 silly install resolved     homepage: 'https://github.com/kriskowal/q',
+411 silly install resolved     author:
+411 silly install resolved      { name: 'Kris Kowal',
+411 silly install resolved        email: 'kris@cixar.com',
+411 silly install resolved        url: 'https://github.com/kriskowal' },
+411 silly install resolved     keywords:
+411 silly install resolved      [ 'q',
+411 silly install resolved        'promise',
+411 silly install resolved        'promises',
+411 silly install resolved        'promises-a',
+411 silly install resolved        'promises-aplus',
+411 silly install resolved        'deferred',
+411 silly install resolved        'future',
+411 silly install resolved        'async',
+411 silly install resolved        'flow control',
+411 silly install resolved        'fluent',
+411 silly install resolved        'browser',
+411 silly install resolved        'node' ],
+411 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+411 silly install resolved     bugs: { url: 'http://github.com/kriskowal/q/issues' },
+411 silly install resolved     license:
+411 silly install resolved      { type: 'MIT',
+411 silly install resolved        url: 'http://github.com/kriskowal/q/raw/master/LICENSE' },
+411 silly install resolved     main: 'q.js',
+411 silly install resolved     files: [ 'LICENSE', 'q.js', 'queue.js' ],
+411 silly install resolved     repository: { type: 'git', url: 'git://github.com/kriskowal/q.git' },
+411 silly install resolved     engines: { node: '>=0.6.0', teleport: '>=0.2.0' },
+411 silly install resolved     dependencies: {},
+411 silly install resolved     devDependencies:
+411 silly install resolved      { cover: '*',
+411 silly install resolved        grunt: '~0.4.1',
+411 silly install resolved        'grunt-cli': '~0.1.9',
+411 silly install resolved        'grunt-contrib-uglify': '~0.9.1',
+411 silly install resolved        'jasmine-node': '1.11.0',
+411 silly install resolved        jshint: '~2.1.9',
+411 silly install resolved        matcha: '~0.2.0',
+411 silly install resolved        opener: '*',
+411 silly install resolved        'promises-aplus-tests': '1.x' },
+411 silly install resolved     scripts:
+411 silly install resolved      { test: 'jasmine-node spec && promises-aplus-tests spec/aplus-adapter',
+411 silly install resolved        'test-browser': 'opener spec/q-spec.html',
+411 silly install resolved        benchmark: 'matcha',
+411 silly install resolved        lint: 'jshint q.js',
+411 silly install resolved        cover: 'cover run jasmine-node spec && cover report html && opener cover_html/index.html',
+411 silly install resolved        minify: 'grunt',
+411 silly install resolved        prepublish: 'grunt' },
+411 silly install resolved     overlay: { teleport: [Object] },
+411 silly install resolved     directories: { test: './spec' },
+411 silly install resolved     readme: '[![Build Status](https://secure.travis-ci.org/kriskowal/q.png?branch=master)](http://travis-ci.org/kriskowal/q)\n\n<a href="http://promises-aplus.github.com/promises-spec">\n    <img src="http://kriskowal.github.io/q/q.png"\n         align="right" alt="Q logo" />\n</a>\n\n*This is Q version 1, from the `v1` branch in Git. This documentation applies to\nthe latest of both the version 1 and version 0.9 release trains. These releases\nare stable. There will be no further releases of 0.9 after 0.9.7 which is nearly\nequivalent to version 1.0.0. All further releases of `q@~1.0` will be backward\ncompatible. The version 2 release train introduces significant and\nbackward-incompatible changes and is experimental at this time.*\n\nIf a function cannot return a value or throw an exception without\nblocking, it can return a promise instead.  A promise is an object\nthat represents the return value or the thrown exception that the\nfunction may eventually provide.  A promise can also be used as a\nproxy for a [remote object][Q-Connection] to overcome latency.\n\n[Q-Connection]: https://github.com/kriskowal/q-connection\n\nOn the first pass, promises can mitigate the “[Pyramid of\nDoom][POD]”: the situation where code marches to the right faster\nthan it marches forward.\n\n[POD]: http://calculist.org/blog/2011/12/14/why-coroutines-wont-work-on-the-web/\n\n```javascript\nstep1(function (value1) {\n    step2(value1, function(value2) {\n        step3(value2, function(value3) {\n            step4(value3, function(value4) {\n                // Do something with value4\n            });\n        });\n    });\n});\n```\n\nWith a promise library, you can flatten the pyramid.\n\n```javascript\nQ.fcall(promisedStep1)\n.then(promisedStep2)\n.then(promisedStep3)\n.then(promisedStep4)\n.then(function (value4) {\n    // Do something with value4\n})\n.catch(function (error) {\n    // Handle any error from all above steps\n})\n.done();\n```\n\nWith this approach, you also get implicit error propagation, just like `try`,\n`catch`, and `finally`.  An error in `promisedStep1` will flow all the way to\nthe `catch` function, where it’s caught and handled.  (Here `promisedStepN` is\na version of `stepN` that returns a promise.)\n\nThe callback approach is called an “inversion of control”.\nA function that accepts a callback instead of a return value\nis saying, “Don’t call me, I’ll call you.”.  Promises\n[un-invert][IOC] the inversion, cleanly separating the input\narguments from control flow arguments.  This simplifies the\nuse and creation of API’s, particularly variadic,\nrest and spread arguments.\n\n[IOC]: http://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript\n\n\n## Getting Started\n\nThe Q module can be loaded as:\n\n-   A ``<script>`` tag (creating a ``Q`` global variable): ~2.5 KB minified and\n    gzipped.\n-   A Node.js and CommonJS module, available in [npm](https://npmjs.org/) as\n    the [q](https://npmjs.org/package/q) package\n-   An AMD module\n-   A [component](https://github.com/component/component) as ``microjs/q``\n-   Using [bower](http://bower.io/) as `q#1.0.1`\n-   Using [NuGet](http://nuget.org/) as [Q](https://nuget.org/packages/q)\n\nQ can exchange promises with jQuery, Dojo, When.js, WinJS, and more.\n\n## Resources\n\nOur [wiki][] contains a number of useful resources, including:\n\n- A method-by-method [Q API reference][reference].\n- A growing [examples gallery][examples], showing how Q can be used to make\n  everything better. From XHR to database access to accessing the Flickr API,\n  Q is there for you.\n- There are many libraries that produce and consume Q promises for everything\n  from file system/database access or RPC to templating. For a list of some of\n  the more popular ones, see [Libraries][].\n- If you want materials that introduce the promise concept generally, and the\n  below tutorial isn\'t doing it for you, check out our collection of\n  [presentations, blog posts, and podcasts][resources].\n- A guide for those [coming from jQuery\'s `$.Deferred`][jquery].\n\nWe\'d also love to have you join the Q-Continuum [mailing list][].\n\n[wiki]: https://github.com/kriskowal/q/wiki\n[reference]: https://github.com/kriskowal/q/wiki/API-Reference\n[examples]: https://github.com/kriskowal/q/wiki/Examples-Gallery\n[Libraries]: https://github.com/kriskowal/q/wiki/Libraries\n[resources]: https://github.com/kriskowal/q/wiki/General-Promise-Resources\n[jquery]: https://github.com/kriskowal/q/wiki/Coming-from-jQuery\n[mailing list]: https://groups.google.com/forum/#!forum/q-continuum\n\n\n## Tutorial\n\nPromises have a ``then`` method, which you can use to get the eventual\nreturn value (fulfillment) or thrown exception (rejection).\n\n```javascript\npromiseMeSomething()\n.then(function (value) {\n}, function (reason) {\n});\n```\n\nIf ``promiseMeSomething`` returns a promise that gets fulfilled later\nwith a return value, the first function (the fulfillment handler) will be\ncalled with the value.  However, if the ``promiseMeSomething`` function\ngets rejected later by a thrown exception, the second function (the\nrejection handler) will be called with the exception.\n\nNote that resolution of a promise is always asynchronous: that is, the\nfulfillment or rejection handler will always be called in the next turn of the\nevent loop (i.e. `process.nextTick` in Node). This gives you a nice\nguarantee when mentally tracing the flow of your code, namely that\n``then`` will always return before either handler is executed.\n\nIn this tutorial, we begin with how to consume and work with promises. We\'ll\ntalk about how to create them, and thus create functions like\n`promiseMeSomething` that return promises, [below](#the-beginning).\n\n\n### Propagation\n\nThe ``then`` method returns a promise, which in this example, I’m\nassigning to ``outputPromise``.\n\n```javascript\nvar outputPromise = getInputPromise()\n.then(function (input) {\n}, function (reason) {\n});\n```\n\nThe ``outputPromise`` variable becomes a new promise for the return\nvalue of either handler.  Since a function can only either return a\nvalue or throw an exception, only one handler will ever be called and it\nwill be responsible for resolving ``outputPromise``.\n\n-   If you return a value in a handler, ``outputPromise`` will get\n    fulfilled.\n\n-   If you throw an exception in a handler, ``outputPromise`` will get\n    rejected.\n\n-   If you return a **promise** in a handler, ``outputPromise`` will\n    “become” that promise.  Being able to become a new promise is useful\n    for managing delays, combining results, or recovering from errors.\n\nIf the ``getInputPromise()`` promise gets rejected and you omit the\nrejection handler, the **error** will go to ``outputPromise``:\n\n```javascript\nvar outputPromise = getInputPromise()\n.then(function (value) {\n});\n```\n\nIf the input promise gets fulfilled and you omit the fulfillment handler, the\n**value** will go to ``outputPromise``:\n\n```javascript\nvar outputPromise = getInputPromise()\n.then(null, function (error) {\n});\n```\n\nQ promises provide a ``fail`` shorthand for ``then`` when you are only\ninterested in handling the error:\n\n```javascript\nvar outputPromise = getInputPromise()\n.fail(function (error) {\n});\n```\n\nIf you are writing JavaScript for modern engines only or using\nCoffeeScript, you may use `catch` instead of `fail`.\n\nPromises also have a ``fin`` function that is like a ``finally`` clause.\nThe final handler gets called, with no arguments, when the promise\nreturned by ``getInputPromise()`` either returns a value or throws an\nerror.  The value returned or error thrown by ``getInputPromise()``\npasses directly to ``outputPromise`` unless the final handler fails, and\nmay be delayed if the final handler returns a promise.\n\n```javascript\nvar outputPromise = getInputPromise()\n.fin(function () {\n    // close files, database connections, stop servers, conclude tests\n});\n```\n\n-   If the handler returns a value, the value is ignored\n-   If the handler throws an error, the error passes to ``outputPromise``\n-   If the handler returns a promise, ``outputPromise`` gets postponed.  The\n    eventual value or error has the same effect as an immediate return\n    value or thrown error: a value would be ignored, an error would be\n    forwarded.\n\nIf you are writing JavaScript for modern engines only or using\nCoffeeScript, you may use `finally` instead of `fin`.\n\n### Chaining\n\nThere are two ways to chain promises.  You can chain promises either\ninside or outside handlers.  The next two examples are equivalent.\n\n```javascript\nreturn getUsername()\n.then(function (username) {\n    return getUser(username)\n    .then(function (user) {\n        // if we get here without an error,\n        // the value returned here\n        // or the exception thrown here\n        // resolves the promise returned\n        // by the first line\n    })\n});\n```\n\n```javascript\nreturn getUsername()\n.then(function (username) {\n    return getUser(username);\n})\n.then(function (user) {\n    // if we get here without an error,\n    // the value returned here\n    // or the exception thrown here\n    // resolves the promise returned\n    // by the first line\n});\n```\n\nThe only difference is nesting.  It’s useful to nest handlers if you\nneed to capture multiple input values in your closure.\n\n```javascript\nfunction authenticate() {\n    return getUsername()\n    .then(function (username) {\n        return getUser(username);\n    })\n    // chained because we will not need the user name in the next event\n    .then(function (user) {\n        return getPassword()\n        // nested because we need both user and password next\n        .then(function (password) {\n            if (user.passwordHash !== hash(password)) {\n                throw new Error("Can\'t authenticate");\n            }\n        });\n    });\n}\n```\n\n\n### Combination\n\nYou can turn an array of promises into a promise for the whole,\nfulfilled array using ``all``.\n\n```javascript\nreturn Q.all([\n    eventualAdd(2, 2),\n    eventualAdd(10, 20)\n]);\n```\n\nIf you have a promise for an array, you can use ``spread`` as a\nreplacement for ``then``.  The ``spread`` function “spreads” the\nvalues over the arguments of the fulfillment handler.  The rejection handler\nwill get called at the first sign of failure.  That is, whichever of\nthe received promises fails first gets handled by the rejection handler.\n\n```javascript\nfunction eventualAdd(a, b) {\n    return Q.spread([a, b], function (a, b) {\n        return a + b;\n    })\n}\n```\n\nBut ``spread`` calls ``all`` initially, so you can skip it in chains.\n\n```javascript\nreturn getUsername()\n.then(function (username) {\n    return [username, getUser(username)];\n})\n.spread(function (username, user) {\n});\n```\n\nThe ``all`` function returns a promise for an array of values.  When this\npromise is fulfilled, the array contains the fulfillment values of the original\npromises, in the same order as those promises.  If one of the given promises\nis rejected, the returned promise is immediately rejected, not waiting for the\nrest of the batch.  If you want to wait for all of the promises to either be\nfulfilled or rejected, you can use ``allSettled``.\n\n```javascript\nQ.allSettled(promises)\n.then(function (results) {\n    results.forEach(function (result) {\n        if (result.state === "fulfilled") {\n            var value = result.value;\n        } else {\n            var reason = result.reason;\n        }\n    });\n});\n```\n\nThe ``any`` function accepts an array of promises and returns a promise that is\nfulfilled by the first given promise to be fulfilled, or rejected if all of the\ngiven promises are rejected.\n\n```javascript\nQ.any(promises)\n.then(function (first) {\n    // Any of the promises was fulfilled.\n}, function (error) {\n    // All of the promises were rejected.\n});\n```\n\n### Sequences\n\nIf you have a number of promise-producing functions that need\nto be run sequentially, you can of course do so manually:\n\n```javascript\nreturn foo(initialVal).then(bar).then(baz).then(qux);\n```\n\nHowever, if you want to run a dynamically constructed sequence of\nfunctions, you\'ll want something like this:\n\n```javascript\nvar funcs = [foo, bar, baz, qux];\n\nvar result = Q(initialVal);\nfuncs.forEach(function (f) {\n    result = result.then(f);\n});\nreturn result;\n```\n\nYou can make this slightly more compact using `reduce`:\n\n```javascript\nreturn funcs.reduce(function (soFar, f) {\n    return soFar.then(f);\n}, Q(initialVal));\n```\n\nOr, you could use the ultra-compact version:\n\n```javascript\nreturn funcs.reduce(Q.when, Q(initialVal));\n```\n\n### Handling Errors\n\nOne sometimes-unintuive aspect of promises is that if you throw an\nexception in the fulfillment handler, it will not be caught by the error\nhandler.\n\n```javascript\nreturn foo()\n.then(function (value) {\n    throw new Error("Can\'t bar.");\n}, function (error) {\n    // We only get here if "foo" fails\n});\n```\n\nTo see why this is, consider the parallel between promises and\n``try``/``catch``. We are ``try``-ing to execute ``foo()``: the error\nhandler represents a ``catch`` for ``foo()``, while the fulfillment handler\nrepresents code that happens *after* the ``try``/``catch`` block.\nThat code then needs its own ``try``/``catch`` block.\n\nIn terms of promises, this means chaining your rejection handler:\n\n```javascript\nreturn foo()\n.then(function (value) {\n    throw new Error("Can\'t bar.");\n})\n.fail(function (error) {\n    // We get here with either foo\'s error or bar\'s error\n});\n```\n\n### Progress Notification\n\nIt\'s possible for promises to report their progress, e.g. for tasks that take a\nlong time like a file upload. Not all promises will implement progress\nnotifications, but for those that do, you can consume the progress values using\na third parameter to ``then``:\n\n```javascript\nreturn uploadFile()\n.then(function () {\n    // Success uploading the file\n}, function (err) {\n    // There was an error, and we get the reason for error\n}, function (progress) {\n    // We get notified of the upload\'s progress as it is executed\n});\n```\n\nLike `fail`, Q also provides a shorthand for progress callbacks\ncalled `progress`:\n\n```javascript\nreturn uploadFile().progress(function (progress) {\n    // We get notified of the upload\'s progress\n});\n```\n\n### The End\n\nWhen you get to the end of a chain of promises, you should either\nreturn the last promise or end the chain.  Since handlers catch\nerrors, it’s an unfortunate pattern that the exceptions can go\nunobserved.\n\nSo, either return it,\n\n```javascript\nreturn foo()\n.then(function () {\n    return "bar";\n});\n```\n\nOr, end it.\n\n```javascript\nfoo()\n.then(function () {\n    return "bar";\n})\n.done();\n```\n\nEnding a promise chain makes sure that, if an error doesn’t get\nhandled before the end, it will get rethrown and reported.\n\nThis is a stopgap. We are exploring ways to make unhandled errors\nvisible without any explicit handling.\n\n\n### The Beginning\n\nEverything above assumes you get a promise from somewhere else.  This\nis the common case.  Every once in a while, you will need to create a\npromise from scratch.\n\n#### Using ``Q.fcall``\n\nYou can create a promise from a value using ``Q.fcall``.  This returns a\npromise for 10.\n\n```javascript\nreturn Q.fcall(function () {\n    return 10;\n});\n```\n\nYou can also use ``fcall`` to get a promise for an exception.\n\n```javascript\nreturn Q.fcall(function () {\n    throw new Error("Can\'t do it");\n});\n```\n\nAs the name implies, ``fcall`` can call functions, or even promised\nfunctions.  This uses the ``eventualAdd`` function above to add two\nnumbers.\n\n```javascript\nreturn Q.fcall(eventualAdd, 2, 2);\n```\n\n\n#### Using Deferreds\n\nIf you have to interface with asynchronous functions that are callback-based\ninstead of promise-based, Q provides a few shortcuts (like ``Q.nfcall`` and\nfriends). But much of the time, the solution will be to use *deferreds*.\n\n```javascript\nvar deferred = Q.defer();\nFS.readFile("foo.txt", "utf-8", function (error, text) {\n    if (error) {\n        deferred.reject(new Error(error));\n    } else {\n        deferred.resolve(text);\n    }\n});\nreturn deferred.promise;\n```\n\nNote that a deferred can be resolved with a value or a promise.  The\n``reject`` function is a shorthand for resolving with a rejected\npromise.\n\n```javascript\n// this:\ndeferred.reject(new Error("Can\'t do it"));\n\n// is shorthand for:\nvar rejection = Q.fcall(function () {\n    throw new Error("Can\'t do it");\n});\ndeferred.resolve(rejection);\n```\n\nThis is a simplified implementation of ``Q.delay``.\n\n```javascript\nfunction delay(ms) {\n    var deferred = Q.defer();\n    setTimeout(deferred.resolve, ms);\n    return deferred.promise;\n}\n```\n\nThis is a simplified implementation of ``Q.timeout``\n\n```javascript\nfunction timeout(promise, ms) {\n    var deferred = Q.defer();\n    Q.when(promise, deferred.resolve);\n    delay(ms).then(function () {\n        deferred.reject(new Error("Timed out"));\n    });\n    return deferred.promise;\n}\n```\n\nFinally, you can send a progress notification to the promise with\n``deferred.notify``.\n\nFor illustration, this is a wrapper for XML HTTP requests in the browser. Note\nthat a more [thorough][XHR] implementation would be in order in practice.\n\n[XHR]: https://github.com/montagejs/mr/blob/71e8df99bb4f0584985accd6f2801ef3015b9763/browser.js#L29-L73\n\n```javascript\nfunction requestOkText(url) {\n    var request = new XMLHttpRequest();\n    var deferred = Q.defer();\n\n    request.open("GET", url, true);\n    request.onload = onload;\n    request.onerror = onerror;\n    request.onprogress = onprogress;\n    request.send();\n\n    function onload() {\n        if (request.status === 200) {\n            deferred.resolve(request.responseText);\n        } else {\n            deferred.reject(new Error("Status code was " + request.status));\n        }\n    }\n\n    function onerror() {\n        deferred.reject(new Error("Can\'t XHR " + JSON.stringify(url)));\n    }\n\n    function onprogress(event) {\n        deferred.notify(event.loaded / event.total);\n    }\n\n    return deferred.promise;\n}\n```\n\nBelow is an example of how to use this ``requestOkText`` function:\n\n```javascript\nrequestOkText("http://localhost:3000")\n.then(function (responseText) {\n    // If the HTTP response returns 200 OK, log the response text.\n    console.log(responseText);\n}, function (error) {\n    // If there\'s an error or a non-200 status code, log the error.\n    console.error(error);\n}, function (progress) {\n    // Log the progress as it comes in.\n    console.log("Request progress: " + Math.round(progress * 100) + "%");\n});\n```\n\n#### Using `Q.Promise`\n\nThis is an alternative promise-creation API that has the same power as\nthe deferred concept, but without introducing another conceptual entity.\n\nRewriting the `requestOkText` example above using `Q.Promise`:\n\n```javascript\nfunction requestOkText(url) {\n    return Q.Promise(function(resolve, reject, notify) {\n        var request = new XMLHttpRequest();\n\n        request.open("GET", url, true);\n        request.onload = onload;\n        request.onerror = onerror;\n        request.onprogress = onprogress;\n        request.send();\n\n        function onload() {\n            if (request.status === 200) {\n                resolve(request.responseText);\n            } else {\n                reject(new Error("Status code was " + request.status));\n            }\n        }\n\n        function onerror() {\n            reject(new Error("Can\'t XHR " + JSON.stringify(url)));\n        }\n\n        function onprogress(event) {\n            notify(event.loaded / event.total);\n        }\n    });\n}\n```\n\nIf `requestOkText` were to throw an exception, the returned promise would be\nrejected with that thrown exception as the rejection reason.\n\n### The Middle\n\nIf you are using a function that may return a promise, but just might\nreturn a value if it doesn’t need to defer, you can use the “static”\nmethods of the Q library.\n\nThe ``when`` function is the static equivalent for ``then``.\n\n```javascript\nreturn Q.when(valueOrPromise, function (value) {\n}, function (error) {\n});\n```\n\nAll of the other methods on a promise have static analogs with the\nsame name.\n\nThe following are equivalent:\n\n```javascript\nreturn Q.all([a, b]);\n```\n\n```javascript\nreturn Q.fcall(function () {\n    return [a, b];\n})\n.all();\n```\n\nWhen working with promises provided by other libraries, you should\nconvert it to a Q promise.  Not all promise libraries make the same\nguarantees as Q and certainly don’t provide all of the same methods.\nMost libraries only provide a partially functional ``then`` method.\nThis thankfully is all we need to turn them into vibrant Q promises.\n\n```javascript\nreturn Q($.ajax(...))\n.then(function () {\n});\n```\n\nIf there is any chance that the promise you receive is not a Q promise\nas provided by your library, you should wrap it using a Q function.\nYou can even use ``Q.invoke`` as a shorthand.\n\n```javascript\nreturn Q.invoke($, \'ajax\', ...)\n.then(function () {\n});\n```\n\n\n### Over the Wire\n\nA promise can serve as a proxy for another object, even a remote\nobject.  There are methods that allow you to optimistically manipulate\nproperties or call functions.  All of these interactions return\npromises, so they can be chained.\n\n```\ndirect manipulation         using a promise as a proxy\n--------------------------  -------------------------------\nvalue.foo                   promise.get("foo")\nvalue.foo = value           promise.put("foo", value)\ndelete value.foo            promise.del("foo")\nvalue.foo(...args)          promise.post("foo", [args])\nvalue.foo(...args)          promise.invoke("foo", ...args)\nvalue(...args)              promise.fapply([args])\nvalue(...args)              promise.fcall(...args)\n```\n\nIf the promise is a proxy for a remote object, you can shave\nround-trips by using these functions instead of ``then``.  To take\nadvantage of promises for remote objects, check out [Q-Connection][].\n\n[Q-Connection]: https://github.com/kriskowal/q-connection\n\nEven in the case of non-remote objects, these methods can be used as\nshorthand for particularly-simple fulfillment handlers. For example, you\ncan replace\n\n```javascript\nreturn Q.fcall(function () {\n    return [{ foo: "bar" }, { foo: "baz" }];\n})\n.then(function (value) {\n    return value[0].foo;\n});\n```\n\nwith\n\n```javascript\nreturn Q.fcall(function () {\n    return [{ foo: "bar" }, { foo: "baz" }];\n})\n.get(0)\n.get("foo");\n```\n\n\n### Adapting Node\n\nIf you\'re working with functions that make use of the Node.js callback pattern,\nwhere callbacks are in the form of `function(err, result)`, Q provides a few\nuseful utility functions for converting between them. The most straightforward\nare probably `Q.nfcall` and `Q.nfapply` ("Node function call/apply") for calling\nNode.js-style functions and getting back a promise:\n\n```javascript\nreturn Q.nfcall(FS.readFile, "foo.txt", "utf-8");\nreturn Q.nfapply(FS.readFile, ["foo.txt", "utf-8"]);\n```\n\nIf you are working with methods, instead of simple functions, you can easily\nrun in to the usual problems where passing a method to another function—like\n`Q.nfcall`—"un-binds" the method from its owner. To avoid this, you can either\nuse `Function.prototype.bind` or some nice shortcut methods we provide:\n\n```javascript\nreturn Q.ninvoke(redisClient, "get", "user:1:id");\nreturn Q.npost(redisClient, "get", ["user:1:id"]);\n```\n\nYou can also create reusable wrappers with `Q.denodeify` or `Q.nbind`:\n\n```javascript\nvar readFile = Q.denodeify(FS.readFile);\nreturn readFile("foo.txt", "utf-8");\n\nvar redisClientGet = Q.nbind(redisClient.get, redisClient);\nreturn redisClientGet("user:1:id");\n```\n\nFinally, if you\'re working with raw deferred objects, there is a\n`makeNodeResolver` method on deferreds that can be handy:\n\n```javascript\nvar deferred = Q.defer();\nFS.readFile("foo.txt", "utf-8", deferred.makeNodeResolver());\nreturn deferred.promise;\n```\n\n### Long Stack Traces\n\nQ comes with optional support for “long stack traces,” wherein the `stack`\nproperty of `Error` rejection reasons is rewritten to be traced along\nasynchronous jumps instead of stopping at the most recent one. As an example:\n\n```js\nfunction theDepthsOfMyProgram() {\n  Q.delay(100).done(function explode() {\n    throw new Error("boo!");\n  });\n}\n\ntheDepthsOfMyProgram();\n```\n\nusually would give a rather unhelpful stack trace looking something like\n\n```\nError: boo!\n    at explode (/path/to/test.js:3:11)\n    at _fulfilled (/path/to/test.js:q:54)\n    at resolvedValue.promiseDispatch.done (/path/to/q.js:823:30)\n    at makePromise.promise.promiseDispatch (/path/to/q.js:496:13)\n    at pending (/path/to/q.js:397:39)\n    at process.startup.processNextTick.process._tickCallback (node.js:244:9)\n```\n\nBut, if you turn this feature on by setting\n\n```js\nQ.longStackSupport = true;\n```\n\nthen the above code gives a nice stack trace to the tune of\n\n```\nError: boo!\n    at explode (/path/to/test.js:3:11)\nFrom previous event:\n    at theDepthsOfMyProgram (/path/to/test.js:2:16)\n    at Object.<anonymous> (/path/to/test.js:7:1)\n```\n\nNote how you can see the function that triggered the async operation in the\nstack trace! This is very helpful for debugging, as otherwise you end up getting\nonly the first line, plus a bunch of Q internals, with no sign of where the\noperation started.\n\nIn node.js, this feature can also be enabled through the Q_DEBUG environment\nvariable:\n\n```\nQ_DEBUG=1 node server.js\n```\n\nThis will enable long stack support in every instance of Q.\n\nThis feature does come with somewhat-serious performance and memory overhead,\nhowever. If you\'re working with lots of promises, or trying to scale a server\nto many users, you should probably keep it off. But in development, go for it!\n\n## Tests\n\nYou can view the results of the Q test suite [in your browser][tests]!\n\n[tests]: https://rawgithub.com/kriskowal/q/v1/spec/q-spec.html\n\n## License\n\nCopyright 2009–2015 Kristopher Michael Kowal and contributors\nMIT License (enclosed)\n\n',
+411 silly install resolved     readmeFilename: 'README.md',
+411 silly install resolved     _id: 'q@1.4.1',
+411 silly install resolved     _shasum: '55705bcd93c5f3673530c2c2cbc0c2b3addc286e',
+411 silly install resolved     _resolved: 'https://registry.npmjs.org/q/-/q-1.4.1.tgz',
+411 silly install resolved     _from: 'q@>=1.4.1 <2.0.0' } ]
+412 info install q@1.4.1 into C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk
+413 info installOne q@1.4.1
+414 verbose installOne of q to C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk not in flight; installing
+415 verbose lock using C:\Users\Van\AppData\Roaming\npm-cache\_locks\q-aa5697cdfa37ef3b.lock for C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q
+416 silly install write writing q 1.4.1 to C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q
+417 verbose unbuild node_modules\shoutpoint-api-sdk\node_modules\q
+418 silly gentlyRm C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q is being purged from base C:\Users\Van\workspace\hackuci2015
+419 verbose gentlyRm don't care about contents; nuking C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q
+420 verbose tar unpack C:\Users\Van\AppData\Roaming\npm-cache\q\1.4.1\package.tgz
+421 verbose tar unpacking to C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q
+422 silly gentlyRm C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q is being purged
+423 verbose gentlyRm don't care about contents; nuking C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q
+424 silly gunzTarPerm modes [ '777', '666' ]
+425 silly gunzTarPerm extractEntry package.json
+426 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+427 silly gunzTarPerm extractEntry README.md
+428 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+429 silly gunzTarPerm extractEntry LICENSE
+430 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+431 silly gunzTarPerm extractEntry q.js
+432 silly gunzTarPerm modified mode [ 'q.js', 420, 438 ]
+433 silly gunzTarPerm extractEntry queue.js
+434 silly gunzTarPerm modified mode [ 'queue.js', 420, 438 ]
+435 silly gunzTarPerm extractEntry CHANGES.md
+436 silly gunzTarPerm modified mode [ 'CHANGES.md', 420, 438 ]
+437 verbose write writing to C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q\package.json
+438 info preinstall q@1.4.1
+439 verbose readDependencies loading dependencies from C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q\package.json
+440 verbose readDependencies loading dependencies from C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q\package.json
+441 silly install resolved []
+442 verbose about to build C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q
+443 info build C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q
+444 info linkStuff q@1.4.1
+445 silly linkStuff q@1.4.1 has C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules as its parent node_modules
+446 verbose linkBins q@1.4.1
+447 verbose linkMans q@1.4.1
+448 verbose rebuildBundles q@1.4.1
+449 info install q@1.4.1
+450 info postinstall q@1.4.1
+451 verbose unlock done using C:\Users\Van\AppData\Roaming\npm-cache\_locks\q-aa5697cdfa37ef3b.lock for C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk\node_modules\q
+452 verbose about to build C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk
+453 info build C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk
+454 info linkStuff shoutpoint-api-sdk@0.4.4
+455 silly linkStuff shoutpoint-api-sdk@0.4.4 has C:\Users\Van\workspace\hackuci2015\node_modules as its parent node_modules
+456 verbose linkBins shoutpoint-api-sdk@0.4.4
+457 verbose linkMans shoutpoint-api-sdk@0.4.4
+458 verbose rebuildBundles shoutpoint-api-sdk@0.4.4
+459 verbose rebuildBundles [ 'q' ]
+460 info install shoutpoint-api-sdk@0.4.4
+461 info postinstall shoutpoint-api-sdk@0.4.4
+462 verbose unlock done using C:\Users\Van\AppData\Roaming\npm-cache\_locks\shoutpoint-api-sdk-0e84105c7f95f47a.lock for C:\Users\Van\workspace\hackuci2015\node_modules\shoutpoint-api-sdk
+463 info build C:\Users\Van\workspace\hackuci2015
+464 info linkStuff hackuci2015@0.1.0
+465 silly linkStuff hackuci2015@0.1.0 has C:\Users\Van\workspace as its parent node_modules
+466 verbose linkBins hackuci2015@0.1.0
+467 verbose linkMans hackuci2015@0.1.0
+468 verbose rebuildBundles hackuci2015@0.1.0
+469 verbose rebuildBundles [ '.bin',
+469 verbose rebuildBundles   'apidoc',
+469 verbose rebuildBundles   'async',
+469 verbose rebuildBundles   'body-parser',
+469 verbose rebuildBundles   'browser-sync',
+469 verbose rebuildBundles   'chalk',
+469 verbose rebuildBundles   'compression',
+469 verbose rebuildBundles   'cookie-parser',
+469 verbose rebuildBundles   'del',
+469 verbose rebuildBundles   'errorhandler',
+469 verbose rebuildBundles   'express',
+469 verbose rebuildBundles   'gulp',
+469 verbose rebuildBundles   'gulp-angular-filesort',
+469 verbose rebuildBundles   'gulp-angular-templatecache',
+469 verbose rebuildBundles   'gulp-autoprefixer',
+469 verbose rebuildBundles   'gulp-bump',
+469 verbose rebuildBundles   'gulp-concat',
+469 verbose rebuildBundles   'gulp-css-url-rebase',
+469 verbose rebuildBundles   'gulp-git',
+469 verbose rebuildBundles   'gulp-inject',
+469 verbose rebuildBundles   'gulp-jscs',
+469 verbose rebuildBundles   'gulp-jscs-stylish',
+469 verbose rebuildBundles   'gulp-jshint',
+469 verbose rebuildBundles   'gulp-minify-css',
+469 verbose rebuildBundles   'gulp-mocha',
+469 verbose rebuildBundles   'gulp-ng-annotate',
+469 verbose rebuildBundles   'gulp-nodemon',
+469 verbose rebuildBundles   'gulp-open',
+469 verbose rebuildBundles   'gulp-plumber',
+469 verbose rebuildBundles   'gulp-protractor',
+469 verbose rebuildBundles   'gulp-rev-all',
+469 verbose rebuildBundles   'gulp-sass',
+469 verbose rebuildBundles   'gulp-uglify',
+469 verbose rebuildBundles   'gulp-usemin',
+469 verbose rebuildBundles   'gulp-util',
+469 verbose rebuildBundles   'gulp-wait',
+469 verbose rebuildBundles   'gulp-watch',
+469 verbose rebuildBundles   'jasmine-core',
+469 verbose rebuildBundles   'jshint-stylish',
+469 verbose rebuildBundles   'karma',
+469 verbose rebuildBundles   'karma-jasmine',
+469 verbose rebuildBundles   'karma-ng-html2js-preprocessor',
+469 verbose rebuildBundles   'karma-phantomjs-launcher',
+469 verbose rebuildBundles   'lodash',
+469 verbose rebuildBundles   'lyrics-fetcher',
+469 verbose rebuildBundles   'main-bower-files',
+469 verbose rebuildBundles   'method-override',
+469 verbose rebuildBundles   'morgan',
+469 verbose rebuildBundles   'msnodesql',
+469 verbose rebuildBundles   'node-sqlserver-unofficial',
+469 verbose rebuildBundles   'pg',
+469 verbose rebuildBundles   'phantomjs',
+469 verbose rebuildBundles   'querystring',
+469 verbose rebuildBundles   'request-promise',
+469 verbose rebuildBundles   'ripe',
+469 verbose rebuildBundles   'run-sequence',
+469 verbose rebuildBundles   'should',
+469 verbose rebuildBundles   'shoutpoint-api-sdk',
+469 verbose rebuildBundles   'spotify-web-api-node',
+469 verbose rebuildBundles   'streamqueue',
+469 verbose rebuildBundles   'supertest',
+469 verbose rebuildBundles   'watson-developer-cloud' ]
+470 verbose rebuild bundle C:\Users\Van\workspace\hackuci2015\node_modules\jasmine-core
+471 info build C:\Users\Van\workspace\hackuci2015\node_modules\jasmine-core
+472 info preinstall jasmine-core@2.3.4
+473 info linkStuff jasmine-core@2.3.4
+474 silly linkStuff jasmine-core@2.3.4 has C:\Users\Van\workspace\hackuci2015\node_modules as its parent node_modules
+475 verbose linkBins jasmine-core@2.3.4
+476 verbose linkMans jasmine-core@2.3.4
+477 verbose rebuildBundles jasmine-core@2.3.4
+478 info install jasmine-core@2.3.4
+479 info postinstall jasmine-core@2.3.4
+480 verbose rebuild bundle C:\Users\Van\workspace\hackuci2015\node_modules\msnodesql
+481 info build C:\Users\Van\workspace\hackuci2015\node_modules\msnodesql
+482 info preinstall msnodesql@0.2.1
+483 info linkStuff msnodesql@0.2.1
+484 silly linkStuff msnodesql@0.2.1 has C:\Users\Van\workspace\hackuci2015\node_modules as its parent node_modules
+485 verbose linkBins msnodesql@0.2.1
+486 verbose linkMans msnodesql@0.2.1
+487 verbose rebuildBundles msnodesql@0.2.1
+488 info install msnodesql@0.2.1
+489 verbose unsafe-perm in lifecycle true
+490 info msnodesql@0.2.1 Failed to exec install script
+491 verbose stack Error: msnodesql@0.2.1 install: `node-gyp rebuild`
+491 verbose stack Exit status 1
+491 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:214:16)
+491 verbose stack     at emitTwo (events.js:87:13)
+491 verbose stack     at EventEmitter.emit (events.js:172:7)
+491 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+491 verbose stack     at emitTwo (events.js:87:13)
+491 verbose stack     at ChildProcess.emit (events.js:172:7)
+491 verbose stack     at maybeClose (internal/child_process.js:818:16)
+491 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+492 verbose pkgid msnodesql@0.2.1
+493 verbose cwd C:\Users\Van\workspace\hackuci2015
+494 error Windows_NT 10.0.10240
+495 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i"
+496 error node v4.1.2
+497 error npm  v2.14.4
+498 error code ELIFECYCLE
+499 error msnodesql@0.2.1 install: `node-gyp rebuild`
+499 error Exit status 1
+500 error Failed at the msnodesql@0.2.1 install script 'node-gyp rebuild'.
+500 error This is most likely a problem with the msnodesql package,
+500 error not with npm itself.
+500 error Tell the author that this fails on your system:
+500 error     node-gyp rebuild
+500 error You can get their info via:
+500 error     npm owner ls msnodesql
+500 error There is likely additional logging output above.
+501 verbose exit [ 1, true ]
