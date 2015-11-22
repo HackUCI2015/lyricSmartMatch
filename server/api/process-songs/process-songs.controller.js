@@ -64,12 +64,12 @@ function getLyrics(prev, song, callback) {
 
 
 
-function insertIntoUsersTable(personalityInsight, user) {
+function insertIntoUsersTable(personalityInsight, user, res) {
   pg.connect(conString, function(err, client, done) {
     if (err) {
       return console.error('error fetching client from pool', err);
     }
-
+    var userWhere = "WHERE user_name = '" + user.name + "'";
     var traitArray = [];
     Object.keys(personalityInsight).forEach(function (trait) {
       traitArray.push(personalityInsight[trait]);
@@ -119,9 +119,9 @@ function insertIntoUsersTable(personalityInsight, user) {
       'immoderation,' +
       'self_consciousness,' +
       'susceptible_to_stress' +
-      ') =' +
+      ') = ' +
       toTrait +
-      "WHERE user_name = '" + user.name + "'"
+      userWhere
     );
 
     client.query(query, function (err, result) {
@@ -132,7 +132,12 @@ function insertIntoUsersTable(personalityInsight, user) {
         return console.error('error running query', err);
       }
 
-      return { data: 'success' }
+      var query2 = "SELECT * FROM users " + userWhere;
+
+      client.query(query2, function (err, result2) {
+        res.status(200).json(result2.rows[0]);
+      });
+
     });
   });
 }
@@ -145,7 +150,7 @@ function insertIntoUsersTable(personalityInsight, user) {
  */
  exports.index = function (req, res) {
   var songs = JSON.parse(req.query.songs);
-  var user = req.query.user;
+  var user = JSON.parse(req.query.user);
 
   async.reduce(songs, '', getLyrics, function (err, result) {
     if (err) return err;
@@ -175,7 +180,7 @@ function insertIntoUsersTable(personalityInsight, user) {
           }
         }
 
-        res.status(200).json(insertIntoUsersTable(personalityInsight, user));
+        insertIntoUsersTable(personalityInsight, user, res);
       }
     });
   });

@@ -23,15 +23,16 @@ angular.module('hackuci2015')
       },
 
       sendSongs: function () {
-        console.log(vm.selectedTracks);
         $http({
           method: 'GET',
           url: '/api/process-songs',
           params: {
             songs: JSON.stringify(vm.selectedTracks),
-            user: UserFactory.currentUser
+            user: JSON.stringify(UserFactory.getCurrentUser())
           }
-        }).then(function success (data) {
+        }).then(function success (result) {
+          result.data.name = result.data.user_name;
+          UserFactory.setCurrentUser(result.data)
           $location.path('/matches');
         }, function error (err) {
           console.log(err);

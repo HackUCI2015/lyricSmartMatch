@@ -39,12 +39,10 @@ angular.module('hackuci2015', [
         }
       },
 
-      getCurrentUser: function () {
-        return UserFactory.currentUser;
-      },
+      getCurrentUser: UserFactory.getCurrentUser,
 
       logout: function () {
-        UserFactory.currentUser = {};
+        UserFactory.setCurrentUser({});
         $location.path('/');
       },
 

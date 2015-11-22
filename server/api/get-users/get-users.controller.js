@@ -17,13 +17,17 @@ function handleError (res, err) {
  * @param res
  */
 exports.index = function (req, res) {
+  console.log(req.query.user);
+  var user = JSON.parse(req.query.user);
+  console.log('here');
+  console.log(user);
+
   pg.connect(conString, function(err, client, done) {
     if (err) {
       return console.error('error fetching client from pool', err);
     }
 
-    var query = 
-      'SELECT * from users';
+    var query = "SELECT * FROM users WHERE user_name != '" + user.name + "'";
 
     client.query(query, function (err, result) {
       //call `done()` to release the client back to the pool 
@@ -35,33 +39,27 @@ exports.index = function (req, res) {
 
       var users = result.rows;
 
-      var user = {
-        username: "maxpaulus",
-        id: 123456,
-        'agreeableness': .52,
-        'orderliness' : 1.0,
-        'excitement_seeking' : .11,
-        'fiery': .24
-      }
-
       var distancesToOtherUsers = [];
 
       for (var j = 0; j < users.length; j++) {
         var otherUser = users[j];
-        if (otherUser.id !== user.id) {
-          var diffSum = 0;
-          for (var trait in user) {
-            if (user.hasOwnProperty(trait) && trait !== 'username' && trait !== 'id') {
-              var diff = Math.abs(+user[trait] - +otherUser[trait]);
-              diffSum += diff;
-            }
+        var diffSum = 0;
+        for (var trait in user) {
+          if (user.hasOwnProperty(trait)
+            && trait !== 'user_name' 
+            && trait !== 'id' 
+            && trait !== 'phone_number'
+            && trait !== 'name') {
+            console.log(user[trait], otherUser[trait]);
+            var diff = Math.abs(+user[trait] - +otherUser[trait]);
+            diffSum += diff;
           }
-          distancesToOtherUsers.push({
-            distance: diffSum.toFixed(2),
-            username: otherUser.user_name,
-            id: otherUser.id
-          });
         }
+        distancesToOtherUsers.push({
+          distance: diffSum.toFixed(2),
+          username: otherUser.user_name,
+          id: otherUser.id
+        });
       }
 
       distancesToOtherUsers = distancesToOtherUsers

@@ -18,11 +18,10 @@ angular.module('hackuci2015')
           url: '/api/login',
           params: { name: vm.name }
         }).then(function (result) {
-          UserFactory.currentUser = {
+          UserFactory.setCurrentUser({
             name: vm.name,
             id: result.data.id
-          };
-          console.log(UserFactory.currentUser);
+          });
           $location.path('/analyze');
         }, function (err) {
           console.log(err);
@@ -38,11 +37,10 @@ angular.module('hackuci2015')
             phone_number: vm.registerPhone
           }
         }).then(function (result) {
-          UserFactory.currentUser = {
+          UserFactory.setCurrentUser({
             name: result.data.user_name,
             id: result.data.id
-          };
-          console.log(UserFactory.currentUser);
+          });
           $location.path('/analyze');
         }, function (err) {
           console.log(err);
