@@ -61,6 +61,11 @@ angular.module('hackuci2015', [
           link: '/matches',
           title: 'Matches',
           disabledIfLoggedOut: true
+        },
+        {
+          link: '/connections',
+          title: 'Connections',
+          disabledIfLoggedOut: true
         }
       ]
     });

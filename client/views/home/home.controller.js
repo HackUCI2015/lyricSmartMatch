@@ -18,10 +18,8 @@ angular.module('hackuci2015')
           url: '/api/login',
           params: { name: vm.name }
         }).then(function (result) {
-          UserFactory.setCurrentUser({
-            name: vm.name,
-            id: result.data.id
-          });
+          result.data.name = result.data.user_name;
+          UserFactory.setCurrentUser(result.data);
           $location.path('/analyze');
         }, function (err) {
           console.log(err);

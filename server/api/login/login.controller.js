@@ -24,7 +24,7 @@ exports.index = function (req, res) {
       return console.error('error fetching client from pool', err);
     }
 
-    var query = "SELECT id from users WHERE user_name = '" + req.query.name + "'";
+    var query = "SELECT * from users WHERE user_name = '" + req.query.name + "'";
 
     client.query(query, function (err, result) {
       //call `done()` to release the client back to the pool 

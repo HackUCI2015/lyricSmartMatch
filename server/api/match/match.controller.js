@@ -17,9 +17,37 @@ function handleError (res, err) {
  * @param res
  */
 exports.index = function (req, res) {
-  fs.readFile('server/api/match/match.data.json', 'utf-8', function (err, matchs) {
-    if (err) { return handleError(res, err); }
-    res.status(200).json(JSON.parse(matchs));
+  pg.connect(conString, function(err, client, done) {
+    if (err) {
+      return console.error('error fetching client from pool', err);
+    }
+    var user = JSON.parse(req.query.user);
+    console.log(req.query);
+    var userId = user.id
+    // console.log('userID: ' + userId);
+  
+    var query = "SELECT user2 from user_like_user WHERE user1 = " + userId;
+    console.log(query);
+
+    client.query(query, function (err, result) {
+      if (err) {
+        return console.error('error running query', err);
+      }
+
+      var query2 = "SELECT * from users u INNER JOIN user_like_user ulu ON u.id = ulu.user1 WHERE ulu.user2 = " + userId;
+
+      client.query(query2, function (err, result2) {
+        done();
+
+        if (err) {
+          return console.error('error runnig query', err);
+        }
+        console.log(result2);
+
+        res.status(200).json(result2.rows);
+      });
+      // res.status(200).json({});
+    });
   });
 };
 
