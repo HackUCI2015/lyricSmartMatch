@@ -44,6 +44,7 @@ exports.index = function (req, res) {
       for (var j = 0; j < users.length; j++) {
         var otherUser = users[j];
         var diffSum = 0;
+        var traits = {};
         for (var trait in user) {
           if (user.hasOwnProperty(trait)
             && trait !== 'user_name' 
@@ -53,12 +54,14 @@ exports.index = function (req, res) {
 
             var diff = Math.abs(+user[trait] - +otherUser[trait]);
             diffSum += diff;
+            traits[trait] = diff;
           }
         }
         distancesToOtherUsers.push({
           distance: diffSum.toFixed(2),
           username: otherUser.user_name,
-          id: otherUser.id
+          id: otherUser.id,
+          traitDiff: traits
         });
       }
 
