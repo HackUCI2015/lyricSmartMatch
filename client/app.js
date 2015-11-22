@@ -35,6 +35,10 @@ angular.module('hackuci2015', [
         }
       },
 
+      user: {
+        email: 'vnguyen94@gmail.com'
+      },
+
       menuItems: [
         {
           link: '/',
