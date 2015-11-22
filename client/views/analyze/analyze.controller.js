@@ -1,32 +1,34 @@
 'use strict';
 
 angular.module('hackuci2015')
-  .controller('AnalyzeCtrl', function ($http) {
+  .controller('AnalyzeCtrl', function ($http, $scope) {
 
-    angular.extend(this, {
+    var vm = this;
+
+    angular.extend(vm, {
       name: 'AnalyzeCtrl',
 
+      selectedTracks: [],
+
+      selectTrack: function (track) {
+        vm.selectedTracks.push({
+          artist: track.artists[0].name,
+          name: track.name,
+          thumbnail: track.album.images[2].url
+        });
+      },
+
+      removeTrack: function ($index) {
+        vm.selectedTracks.splice($index, 1);
+      },
+
       sendSongs: function () {
-        var songList = $('#song-list').val().split('\n');
-        var compiledSongList = [];
-        var song;
-
-        for (var i = 0; i < songList.length; ++i) {
-          song = songList[i].split(' - ');
-
-          if (song) {
-            compiledSongList.push({
-              artist: song[0],
-              name: song[1]
-            });
-          }
-        }
-
+        console.log(vm.selectedTracks);
         $http({
           method: 'GET',
           url: '/api/process-songs',
           params: {
-            songs: JSON.stringify(compiledSongList)
+            songs: JSON.stringify(vm.selectedTracks)
           }
         }).then(function success (data) {
           console.log(data);
@@ -36,5 +38,34 @@ angular.module('hackuci2015')
       }
 
     });
+
+    $('#typeahead').typeahead({
+      hint: true,
+      highlight: true,
+      minLength: 1
+    },
+    {
+      limit: 12,
+      async: true,
+      source: function (query, processSync, processAsync) {
+        return $.ajax({
+          url: 'https://api.spotify.com/v1/search',
+          type: 'GET',
+          data: {
+            query: query,
+            offset: 0,
+            limit: 10,
+            type: 'track'
+          },
+          dataType: 'json',
+          success: function (json) {
+            $scope.$apply(function () {
+              vm.tracks = json.tracks.items;
+            });
+          }
+        });
+      }
+    });
+
 
   });

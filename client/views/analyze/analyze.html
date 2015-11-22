@@ -1,4 +1,30 @@
-<div>
-  <textarea id="song-list"></textarea>
-  <md-button ng-click="vm.sendSongs()" class="md-raised">Submit</md-button>
+<div layout="row">
+  <div flex="50">
+    <div layout="column">
+      <input id="typeahead" type="text" />
+      <md-button ng-click="vm.sendSongs()" class="md-raised">Submit</md-button>
+    </div>
+    <md-list layout-padding>
+      <md-list-item ng-click="vm.selectTrack(track)" class="md-3-line track-select" ng-repeat="track in vm.tracks">
+        <img ng-src="{{ track.album.images[2].url }}" class="md-avatar" alt="{{ track.name }}">
+        <div class="md-list-item-text">
+          <h3>{{ track.name }}</h3>
+          <h3>{{ track.artists[0].name }}</h3>
+        </div>
+      </md-list-item>
+    </md-list>
+  </div>
+  <div flex="50">
+    <md-list layout-padding>
+      <md-list-item ng-click="vm.removeTrack($index)" class="md-3-line track-select" ng-repeat="track in vm.selectedTracks">
+        <img ng-src="{{ track.thumbnail }}" class="md-avatar" alt="{{ track.name }}">
+        <div class="md-list-item-text">
+          <h3>{{ track.name }}</h3>
+          <h3>{{ track.artist }}</h3>
+        </div>
+      </md-list-item>
+    </md-list>
+  </div>
 </div>
+
+
