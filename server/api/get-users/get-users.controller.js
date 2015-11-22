@@ -63,7 +63,6 @@ exports.index = function (req, res) {
           });
         }
       }
-      console.log(users[0]);
 
       distancesToOtherUsers = distancesToOtherUsers
         .sort(function (a, b) { return a.distance > b.distance })

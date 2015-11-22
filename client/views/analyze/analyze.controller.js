@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hackuci2015')
-  .controller('AnalyzeCtrl', function ($http, $scope) {
+  .controller('AnalyzeCtrl', function ($http, $scope, $location, UserFactory) {
 
     var vm = this;
 
@@ -28,10 +28,11 @@ angular.module('hackuci2015')
           method: 'GET',
           url: '/api/process-songs',
           params: {
-            songs: JSON.stringify(vm.selectedTracks)
+            songs: JSON.stringify(vm.selectedTracks),
+            user: UserFactory.currentUser
           }
         }).then(function success (data) {
-          console.log(data);
+          $location.path('/matches');
         }, function error (err) {
           console.log(err);
         });
