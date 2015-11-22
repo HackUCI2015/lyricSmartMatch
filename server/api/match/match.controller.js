@@ -17,6 +17,7 @@ function handleError (res, err) {
  * @param res
  */
 exports.index = function (req, res) {
+  console.log('im in here')
   pg.connect(conString, function(err, client, done) {
     if (err) {
       return console.error('error fetching client from pool', err);

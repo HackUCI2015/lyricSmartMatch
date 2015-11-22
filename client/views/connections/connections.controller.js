@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hackuci2015')
-  .controller('ConnectionsCtrl', function (UserFactory) {
+  .controller('ConnectionsCtrl', function (UserFactory, $rootScope) {
 
     var vm = this;
 
@@ -15,9 +15,11 @@ angular.module('hackuci2015')
       }
     });
 
+    $rootScope.toggleTransparency();
+
     UserFactory.getConnections()
       .then(function (rows) {
-        console.log(rows);
+        $rootScope.toggleTransparency();
         vm.connections = rows;
       }, function (err) {
         console.log(err);

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hackuci2015')
-  .controller('MatchesCtrl', function (UserFactory, $http) {
+  .controller('MatchesCtrl', function (UserFactory, $http, $rootScope) {
 
     var vm = this;
 
@@ -24,8 +24,10 @@ angular.module('hackuci2015')
       }
     });
 
+    $rootScope.toggleTransparency();
     UserFactory.getUsers()
       .then(function (rows) {
+        $rootScope.toggleTransparency();
         vm.users = rows;
       }, function (err) {
         console.log(err);

@@ -17,6 +17,7 @@ angular.module('hackuci2015', [
 
   })
   .run(function ($rootScope, $location, $mdSidenav, UserFactory) {
+    var $mainContent = $('.main-content');
 
     $rootScope.user = {
       name: 'Not logged in'
@@ -67,6 +68,10 @@ angular.module('hackuci2015', [
           title: 'Connections',
           disabledIfLoggedOut: true
         }
-      ]
+      ],
+
+      toggleTransparency: function () {
+        $mainContent.toggleClass('transparency');
+      }
     });
   });

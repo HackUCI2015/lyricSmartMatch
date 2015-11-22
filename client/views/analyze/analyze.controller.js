@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hackuci2015')
-  .controller('AnalyzeCtrl', function ($http, $scope, $location, UserFactory) {
+  .controller('AnalyzeCtrl', function ($http, $scope, $rootScope, $location, UserFactory) {
 
     var vm = this;
 
@@ -23,6 +23,8 @@ angular.module('hackuci2015')
       },
 
       sendSongs: function () {
+        $rootScope.toggleTransparency();
+
         $http({
           method: 'GET',
           url: '/api/process-songs',
@@ -31,6 +33,7 @@ angular.module('hackuci2015')
             user: JSON.stringify(UserFactory.getCurrentUser())
           }
         }).then(function success (result) {
+          $rootScope.toggleTransparency();
           result.data.name = result.data.user_name;
           UserFactory.setCurrentUser(result.data)
           $location.path('/matches');

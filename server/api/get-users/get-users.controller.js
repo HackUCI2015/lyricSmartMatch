@@ -50,7 +50,7 @@ exports.index = function (req, res) {
             && trait !== 'id' 
             && trait !== 'phone_number'
             && trait !== 'name') {
-            console.log(user[trait], otherUser[trait]);
+
             var diff = Math.abs(+user[trait] - +otherUser[trait]);
             diffSum += diff;
           }
@@ -63,9 +63,9 @@ exports.index = function (req, res) {
       }
 
       distancesToOtherUsers = distancesToOtherUsers
-        .sort(function (a, b) { return a.distance > b.distance })
+        .sort(function (a, b) { return +a.distance > +b.distance })
         .splice(0,5);
-      console.log(distancesToOtherUsers);
+
       res.status(200).json(distancesToOtherUsers);
     });
   });

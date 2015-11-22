@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hackuci2015')
-  .controller('HomeCtrl', function (UserFactory, $location, $http) {
+  .controller('HomeCtrl', function (UserFactory, $location, $http, $rootScope) {
 
     var vm = this;
 
@@ -13,11 +13,14 @@ angular.module('hackuci2015')
       registerPhone: '',
 
       login: function () {
+        $rootScope.toggleTransparency();
+
         $http({
           method: 'GET',
           url: '/api/login',
           params: { name: vm.name }
         }).then(function (result) {
+          $rootScope.toggleTransparency();
           result.data.name = result.data.user_name;
           UserFactory.setCurrentUser(result.data);
           $location.path('/analyze');
@@ -27,6 +30,8 @@ angular.module('hackuci2015')
       },
 
       register: function () {
+        $rootScope.toggleTransparency();
+
         $http({
           method: 'GET',
           url: '/api/register',
@@ -35,6 +40,8 @@ angular.module('hackuci2015')
             phone_number: vm.registerPhone
           }
         }).then(function (result) {
+          $rootScope.toggleTransparency();
+
           UserFactory.setCurrentUser({
             name: result.data.user_name,
             id: result.data.id
